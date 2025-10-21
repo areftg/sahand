@@ -1,0 +1,35 @@
+{
+  "name": "sahand",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"npm run react-start\" \"npm run electron-start\"",
+    "react-start": "react-scripts start",
+    "electron-start": "wait-on http://localhost:3000 && electron .",
+    "build": "react-scripts build",
+    "package": "electron-builder"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "electron": "^26.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.6.0",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.areftg.sahand",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
