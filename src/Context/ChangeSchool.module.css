@@ -1,0 +1,172 @@
+:root {
+
+    --hover-backcolor: #ebebeb;
+    --school-button-color: var(--backcolor);
+    --school-button-hover-color: #d1e2e0;
+    --text-color-primary: #333;
+    --text-color-secondary: rgba(0, 0, 0, 0.363);
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --border-radius-large: 12px;
+    --border-radius-small: 8px;
+}
+
+
+
+
+
+
+.schoolListContainer {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 30px;
+    animation: fadeIn 0.3s ease-out;
+
+
+    h1 {
+        color: var(--importantcolor);
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+        font-family: bold;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.schoolListItem {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    padding: 5px 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    border-radius: 11px;
+    transition: background-color 0.2s ease;
+    background-color: var(--importantcolor);
+    text-align: right;
+    direction: ltr;
+    margin: 5px auto 0 auto;
+    font-family: bold;
+}
+
+.profilePaneloptionline {
+    width: 95%;
+    height: 3px;
+    background-color: var(--backcolor);
+    margin: 5px auto;
+    border-radius: 25px;
+
+}
+
+.schoolDropdownArroww {
+    transform: rotate(0) !important;
+
+
+
+
+}
+
+.schoolDropdownArrow {
+    transform: rotate(180deg) !important;
+
+}
+
+.schoolDropdownArrowContainer img {
+    transform: rotate(0deg);
+}
+
+.schoolDropdownArrowContainer {
+    transform: rotate(180deg);
+    position: absolute;
+    left: 15px;
+    background-color: var(--importantcolor);
+    padding: 5px;
+    height: 45px;
+    width: 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schoolItemIcon {
+
+    height: 100%;
+    border-radius: var(--border-radius-small);
+    object-fit: cover;
+    flex-shrink: 0;
+    order: 2;
+}
+
+.schoolItemInfo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    order: 1;
+}
+
+.schoolItemInfo h3 {
+    margin: 0;
+    font-size: 13px;
+    color: white;
+
+    line-height: 1;
+}
+
+.schoolItemDetails {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.schoolItemDetails p {
+    margin: 0;
+    font-size: 11px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.schoolItemDetails p img {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    order: 2;
+}
+.list{
+    width: 100%;
+    overflow-y: auto;
+    max-height: 100%;
+}
+.list::-webkit-scrollbar{
+    display: none;
+}

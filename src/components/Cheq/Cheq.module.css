@@ -1,0 +1,377 @@
+.container {
+    text-align: start;
+    text-align: center;
+    font-family: Bold;
+
+    h1 {
+        font-size: 2vw;
+        margin: 0;
+    }
+}
+
+.Cheq {
+    width: 85%;
+    height: 350px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.makedate {
+    width: 40%;
+    height: 100%;
+    background-color: var(--backcolor);
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: bold;
+}
+
+.makedate p:nth-child(1) {
+    font-size: 1em;
+    margin: 0;
+    color: gray;
+}
+
+.makedate input {
+    outline: none;
+    margin: 1px;
+    padding: 5px;
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-family: bold;
+    font-size: 1.2em;
+}
+
+.calender {
+    background-color: var(--importantcolor);
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.lineone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+}
+
+.cheqprice {
+    width: 59%;
+    height: 100%;
+    background-color: var(--backcolor);
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: bold;
+
+    p {
+        font-size: 1.3em;
+        margin: 0;
+        color: gray;
+    }
+
+    input {
+        font-family: bold;
+        margin: 1px;
+        background-color: white;
+        width: 90%;
+        height: 100%;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        font-size: 1.1em;
+    }
+}
+
+
+.linetwo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+
+}
+
+.cardnumber {
+    width: 60%;
+    height: 100%;
+    background-color: var(--backcolor);
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: bold;
+
+    p {
+        font-size: 1vw;
+        margin: 0;
+        color: gray;
+    }
+
+    input {
+        margin: 1px;
+        background-color: white;
+        width: 83%;
+        height: 100%;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0;
+        border: 0;
+        font-size: 1.3em;
+        font-family: bold;
+    }
+}
+
+.cheqserial {
+    width: 40%;
+    height: 100%;
+    background-color: var(--backcolor);
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: bold;
+    margin-right: 10px;
+
+    p {
+        font-size: 1em;
+        margin: 0;
+        color: gray;
+    }
+
+    input {
+        margin: 1px;
+        background-color: white;
+        width: 80%;
+        height: 100%;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        font-family: bold;
+        font-size: 1.1em;
+    }
+}
+
+.cheqselection {
+    width: 92px;
+    height: 60px;
+    margin-right: 8px;
+
+    button {
+        width: 100%;
+        height: 100%;
+        background: var(--importantcolor);
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-family: Bold;
+        font-size: 0.7vw;
+        cursor: pointer;
+    }
+}
+
+
+.linethree {
+    width: 100%;
+    height: 55%;
+    padding: 10px;
+    border: 20px solid var(--backcolor);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.buyer {
+    width: 100%;
+    height: 47%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.4vw;
+
+    .buyerselect {
+        width: 20%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: var(--backcolor);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            font-size: 16px;
+            font-family: Bold;
+            background: #fff;
+            padding: 7px 0;
+            min-width: 4.6vw;
+            border-radius: 5px;
+        }
+    }
+
+    .buyername {
+        height: 100%;
+        transition: all 0.3s ease;
+
+        input {
+            width: 100%;
+            height: 100%;
+            font-family: Bold;
+            font-size: 1em;
+            padding: 0 10px;
+            border: 10px solid var(--backcolor);
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+}
+
+.seller {
+
+    height: 47%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.4vw;
+
+    .sellerselect {
+        width: 20%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: var(--backcolor);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            font-size: 1em;
+            font-family: Bold;
+            background: #fff;
+            padding: 7px 0;
+            min-width: 4.6vw;
+            border-radius: 5px;
+        }
+    }
+
+    .sellerinfo {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background: var(--backcolor);
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 3fr;
+        column-gap: 0.4vw;
+        padding: 5px;
+        transition: all 0.3s ease;
+
+        input {
+            width: 100%;
+            padding: 0 2px;
+            border-radius: 1px;
+            font-size: 0.9vw;
+            outline: none;
+            border: none;
+            font-family: bold;
+            margin: 2px;
+        }
+    }
+}
+
+.customradio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.customradio:checked {
+    background-color: var(--importantcolor);
+    box-shadow: inset 0 0 0 8px #fff;
+}
+
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+
+}
+
+.nextButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--importantcolor);
+    border: 0;
+    color: white;
+    font-family: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 180px;
+    font-size: 20px;
+    margin: 25px;
+
+    img {
+        width: 1.5vw;
+    }
+
+    p {
+        margin: 0;
+    }
+}

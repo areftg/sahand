@@ -1,0 +1,129 @@
+.UserEdit{
+    width: 100%;
+    border-radius: 16px;
+    background-color: white;
+    padding: 15px 30px 100px 30px;
+    font-family: bold;
+    margin-top: 15px;
+    direction: rtl;
+    height: 60vh;
+    overflow-y: scroll;
+}
+.attention{
+    opacity: 50%;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.right{
+    width: 45%;
+}
+.row{
+    width: 100%;
+    background-color: var(--backcolor);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-radius: 8px;
+    margin-top: 30px;
+    p{
+        margin: auto auto;
+    }
+}
+.item{
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    width: 70%;
+    font-size: 18px;
+    font-family: bold;
+    height: 55px;
+    border-radius: 4px;
+}
+.left{
+    width: 45%;
+    height: 100%;
+}
+.dash{
+    width: 100%;
+    background-color: black;
+    height: 2px;
+    border-radius: 16px;
+    margin-top: 30px;
+    opacity: 30%;
+}
+.button{
+    background-color: var(--importantcolor);
+    border: 0;
+    color: white;
+    padding: 5px;
+    width: 50%;
+    border-radius: 4px;
+    height: 55px;
+    font-size: 18px;
+    font-family: bold;
+    margin-top: 12px;
+}
+.firstrow{
+    margin-top: 0;
+}
+@media screen and (max-width: 1440px) {
+    .container{
+        padding-bottom: 10px;
+    }
+    .attention{
+        font-size: 13px;
+    }
+    .row{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .firstrow{
+        margin: 0;
+    }
+    .item{
+        padding: 5px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .right{
+        padding-bottom: 5px;
+        height: 100%;
+    }
+    .left{
+        height: 100%;
+    }
+    .button{
+        width: 40%;
+        font-size: 14px;
+        padding: 10px;
+        height: 40px;
+    }
+    .dash{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .UserEdit{
+        padding: 15px;
+        padding-bottom: 150px;
+    }
+    .container{
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .right{
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+    }
+
+}
+    

@@ -1,0 +1,756 @@
+.container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    background-color: white; 
+    border-radius: 16px;
+    padding: 10px;
+}
+.otpContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.otpInput {
+    letter-spacing: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    width: 250px;
+   height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    direction: ltr; /* مهم برای نمایش صحیح مکان‌نما */
+}
+
+.otpInput:focus {
+    outline: none;
+    border-color: #69b0b2;
+    box-shadow: 0 0 5px rgba(105, 176, 178, 0.5);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+}
+
+.modalActions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: bold;
+  border: 0;
+}
+
+.verifyButton {
+  background-color: var(--importantcolor);
+  color: white;
+
+}
+.loading_text{
+  position: absolute;
+  margin-left: 10px;
+}
+.modalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+}
+.modal{
+  background-color: white;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: bold;
+  position: relative;
+  width: 40vw;
+  height: 30vh;
+  h1{
+    font-size: 22px;
+  }
+}
+.modalinfo{
+  font-size: 12px;
+  color: gray;
+}
+.modalback{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: var(--backcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 5px;
+  gap: 5px;
+  img{
+    height: 30px;
+  }
+}
+.modalContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--backcolor);
+  padding: 5px;
+  border-radius: 8px;
+}
+.accept{
+  width: 120px;
+  height: 30px;
+  background-color: var(--importantcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-family: bold;
+  border: 0;
+  color: white;
+}
+.prefilled .txt_inp,
+.prefilled .date_inp,
+.prefilled .dropdown_expect_txt {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f2f2f2;
+}
+
+
+
+
+.resendButton {
+  background-color: var(--backcolor);
+  color: black;
+}
+
+
+
+
+
+.inputs_container {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.inputs_container::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+
+.form_style {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 0.5vw;
+    margin-bottom: 5px;
+}
+.txt_inp {
+    width: 28vw;
+    height: 40px;
+    background: #FFFFFF;
+    border: 4px solid #C5DADA;
+    outline: none;
+    border-radius: 14px;
+    padding: 0 0.5vw;
+    font-family: Bold;
+}
+.txt_lbl {
+    color: #000;
+    font-family: bold;
+    font-size: 1vw;
+}
+
+.dropdown_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    direction: ltr;
+    margin-bottom: 1.8vh;
+}
+.dropdown_expect_txt {
+  width: 28vw;
+  margin-right: 1vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+}
+.displayBox {
+    width: 87%;
+    height: 40px;
+    background-color: #ffffff;
+    border: 4px solid #C5DADA;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 10px;
+    font-size: 1vw;
+    cursor: pointer;
+    font-family: bold;
+}
+.arrowBox {
+    width: 13%;
+    height: 40px;
+    background-color: #ffffff;
+    border: 4px solid #C5DADA;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.dropdown_txt {
+    color: #000;
+    font-family: bold;
+    font-size: 1vw;
+}
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0.5%;
+    right: 28.5%;
+    max-height: 17vw;
+    background-color: #ffffff;
+    border-radius: 14px;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.418);
+    overflow-y: auto;
+    font-family: Bold;
+    font-size: 0.8vw;
+    opacity: 0;
+    transform: scaleY(0.95);
+    transform-origin: top;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    padding: 5px 0;
+}
+.dropdownMenu.show {
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+.dropdownMenu::-webkit-scrollbar {
+  background: transparent;
+}
+.dropdownMenu::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+.dropdownMenu::-webkit-scrollbar-button {
+  display: none;
+}
+.dropdownItem {
+  background-color: var(--backcolor);
+  margin-top: 5px;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+.dropdownItem:first-child {
+  margin-top: unset;
+}
+.dropdownItem:hover {
+  background-color: #69b0b2;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.birthDateWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  margin-bottom: 1.8vh;
+}
+.label {
+  color: #000;
+  font-family: bold;
+  font-size: 0.9vw;
+  display: flex;
+  align-items: center;
+}
+.inputWithIcon {
+  width: 28vw;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 4px solid #C5DADA;
+  input{
+    border: 0;
+    font-family: bold;
+    outline: 0;
+  }
+}
+.date_inp {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  font-size: 1.1vw;
+}
+.calendarPopup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  background-color: #69B0B2;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  img{
+    height: 25px;
+    width: 25px;
+  }
+}
+:global(.calender_icon_open_close2){
+  height: 35px;
+ 
+}
+.section_locked {
+  opacity: 0.5;
+  pointer-events: none; /* از کلیک شدن روی آیتم‌های داخل این بخش جلوگیری می‌کند */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image_picker {
+    width: 160px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    row-gap: 1.3vw;
+}
+.the_picker {
+    width: 150px;
+    height: 200px;
+    background: #fff;
+    border-radius: 14px;
+    border: 4px solid #C5DADA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.picker_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+.picker_icon {
+  width: 6vw;
+  height: 6vw;
+}
+.preview_keeper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.preview_keeper.show {
+  opacity: 1;
+  pointer-events: all;
+}
+.img_preview {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.img_preview.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.picker_content.hide {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+.picker_text {
+  font-size: 1vw;
+  font-family: Bold;
+  color: #0000005c;
+}
+.picker-text.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+.picker-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.submit_btn {
+    width: 80%;
+    height: 2.5vw;
+    background: #69B0B2;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: Bold;
+    font-size: 0.8vw;
+    cursor: pointer;
+}
+
+
+.red_star {
+    color: red;
+    font-family: bold;
+    margin-left: 2px;
+ 
+}
+.spacer {
+    flex-grow: 1;
+}
+.required {
+  color: red;
+  margin-right: 4px;
+  font-family: bold;
+
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+
+   font-family: bold;
+ 
+}
+.arrow {
+  width: 2vw;
+  height: 2vw;
+  transition: transform 0.3s ease;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+@media screen and (max-width: 1440px) {
+  .back_container {
+    padding: 0.6vw 1vw;
+    border-radius: 10px;
+    top: -1vw;
+    right: -1vw;
+  }
+  .dropdown_container {
+    margin-bottom: 2.4vh;
+  }
+  .birthDateWrapper {
+    margin-bottom: 2.4vh;
+  }
+  .displayBox {
+   height: 40px;
+  }
+  .arrowBox {
+    height: 40px;
+  }
+  .dropdownMenu {
+    right: 30%;
+    border-radius: 10px;
+  }
+  .calendarPopup {
+    border-radius: 5px;
+  }
+  :global(.calender_icon_open_close2){
+    width: 2.5vw;
+    padding: 0.11vw 0.2vw 0.0vw 0.2vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    align-items: flex-start;
+  }
+  .back_container {
+    font-size: 1.3vw;
+  }
+  .back_img {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .txt_inp {
+    height: 40px;
+  }
+  .txt_lbl {
+    font-size: 1.3vw;
+  }
+
+  .form_style {
+    height: 80%;
+  }
+
+  .image_picker {
+    width: 25%;
+    height: 60vh;
+  }
+  .the_picker {
+    width: 70%;
+  }
+  .picker_icon {
+    width:40px;
+    height: 40px;
+  }
+  .picker_text {
+    font-size: 1.4vw;
+  }
+  .dropdown_txt {
+    font-size: 1.3vw;
+  }
+  .label {
+    font-size: 1.3vw;
+  }
+
+  .dropdown_container {
+    margin-bottom: 1.6vh;
+  }
+  .birthDateWrapper {
+    margin-bottom: 1.6vh;
+  }
+  .displayBox {
+    width: 85%;
+    height: 40px;
+    font-size: 1.5vw;
+    border-radius: 10px;
+  }
+  .arrowBox {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .dropdownMenu {
+    right: 34%;
+  }
+  .dropdownItem {
+    font-size: 1.2vw;
+  }
+
+  .inputWithIcon {
+    width: 28vw;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .calendarPopup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1vw 0.2vw;
+    border-radius: 5px;
+    background-color: #69B0B2;
+    position: absolute;
+    top: calc(50% - 2.9vh/2);
+    left: 0.7vw;
+  }
+  :global(.calender_icon_open_close2){
+    width: 2vw;
+    padding: 0.11vw 0.2vw 0.0vw 0.2vw;
+  }
+
+  .submit_btn {
+    width: 70%;
+    height: 3.2vh;
+    font-size: 1.1vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    height: 120vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+  .dropdown_container {
+    margin-bottom: 0.3vh;
+  }
+  .birthDateWrapper {
+    margin-bottom: 0.3vh;
+  }
+  .dropdown_title {
+    margin: 0;
+  }
+  .inputs_container {
+   
+    width: 100%;
+    height: fit-content !important
+  }
+  .inputcont{
+     background-color: var(--backcolor);
+     border-radius: 6px;
+  }
+  .form_style {
+    width: 100%;
+  }
+  .txt_inp {
+    width: 80%;
+    height: 40px;
+    border-radius: 6px;
+  }
+  .txt_lbl {
+    font-size: 2.5vw;
+    margin-left: 0.5vw;
+  }
+  .dropdown_txt {
+    font-size: 2.5vw;
+  }
+  .label {
+    font-size: 2.5vw;
+  }
+  .inputs {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .inputWithIcon {
+    width: 100%;
+  }
+  .dropdown_container {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .dropdown_expect_txt {
+    width: 100%;
+    margin-right: unset;
+  }
+  .displayBox {
+    width: 100%;
+    height: 40px;
+    
+    border-radius: 6px;
+    font-size: 3vw;
+  }
+  .arrowBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    margin-left: 5px;
+  }
+  .arrow {
+    width: 30px;
+    height: 35px;
+  }
+  .birthDateWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+     border-radius: 6px;
+  }
+  .date_inp {
+    font-size: 3vw;
+    border-radius: 6px;
+  }
+  .calendarPopup {
+    padding: 0 2px;
+    border-radius: 4px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  :global(.calender_icon_open_close2){
+    width: 5vw;
+    height: 2.5vh;
+    padding: 1vw 0.6vw 0.6vw unset;
+  }
+
+  .image_picker {
+    width: 100%;
+    height: 18vh;
+    margin-top: 0.4vh;
+    display: grid;
+    grid-template-columns: 100% 100%;
+    justify-items: center;
+    display: none;
+  }
+  .the_picker {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+  }
+  .picker_icon {
+    width: 17vw;
+    height: 17vw;
+  }
+  .picker_text {
+    font-size: 3vw;
+  }
+  .submit_btn {
+    font-size: 3.5vw;
+    border-radius: 5px;
+    width: 80vw;
+    height: 45px;
+    
+    margin: 10px 5%;
+  }
+
+  .dropdownMenu {
+    left: 1%;
+    right: 12%;
+    border-radius: 6px;
+  }
+  .dropdownItem {
+    font-size: 2.5vw;
+  }
+  .error{
+    text-align: center;
+    width: 100%;
+  }
+}

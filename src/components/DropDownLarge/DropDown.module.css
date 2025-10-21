@@ -1,0 +1,101 @@
+.main{
+    position: relative;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container img{
+     transition: transform 0.3s ease;
+     margin-left: 10px;
+}
+.button{
+       width: fit-content;
+       font-family: bold;
+       font-size: 22px;
+    color: black;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: justify;
+}
+.options {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    border-radius: 16px;
+    z-index: 10;
+    color: black;
+    overflow-y: auto;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-height: 210px; 
+    padding: 5px;
+  }
+
+.show {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+.hide {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+.options::-webkit-scrollbar{
+  display: none;
+}
+.options::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+.option{
+    background-color: var(--backcolor);
+    margin-top: 5px;
+    border-radius: 8px;
+    list-style-type: none; cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px;
+    color: black;
+}
+.circle{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filled{
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+@media screen and (max-width: 1440px) {
+    .left{
+        width: 45%;
+    }
+    .button{
+        width: 120px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button{
+        width: 90px;
+        font-size: 13px;
+    }
+}

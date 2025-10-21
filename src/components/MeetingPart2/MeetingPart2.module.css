@@ -1,0 +1,146 @@
+.DocumentPart3 {
+  text-align: center;
+  h1 {
+    font-family: extra-bold;
+  }
+}
+
+.list {
+  width: 300px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 16px;
+
+}
+
+.firstoption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option {
+  background-color: var(--backcolor);
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
+
+  p {
+    font-family: bold;
+    color: rgba(0, 0, 0, 0.452);
+  }
+}
+
+.option:nth-child(1) {
+  width: 81% !important;
+  margin-top: 0;
+  margin-left: 5px;
+}
+
+.optionn {
+  background-color: var(--backcolor);
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 5vh;
+
+  p {
+    font-family: bold;
+    color: rgba(0, 0, 0, 0.452);
+  }
+}
+
+.title {
+  background-color: white;
+  width: 80%;
+  font-family: bold;
+  border-radius: 4px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  outline: none;
+  border: 0;
+  font-family: bold;
+}
+
+.calender {
+  background-color: var(--importantcolor);
+  width: 40px;
+  height: 45px !important;
+  border-radius: 8px;
+  height: 5vh;
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.nextButton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--importantcolor);
+  border: 0;
+  color: white;
+  font-family: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 150px;
+  font-size: 20px;
+  margin: 25px auto;
+
+  img {
+    width: 1.5vw;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--importantcolor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}

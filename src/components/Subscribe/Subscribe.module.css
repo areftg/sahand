@@ -1,0 +1,68 @@
+.Subscribe{
+    width: 380px;
+    height: 400px;
+    padding: 15px;
+    font-family: bold;
+    h3{
+        margin-top: 0;
+        margin-right: 35px;
+    }
+}
+.profilePanelIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.content{
+    width: 100%;
+    height: 330px;
+    background-image: linear-gradient(to right,var(--importantcolor),#2B2C59);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.section{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 8px;
+    padding: 10px;
+}
+.section:nth-child(1){
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    color: white;
+}
+.section:nth-child(2){
+    height: 55%;
+}
+.section:nth-child(3){
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    button{
+     border: 0;
+     width: 50%;
+     height: 35px;    
+     border-radius: 6px;
+     font-family: bold;
+     font-size: 16px;
+
+    }
+     button:nth-child(1){
+       background: #C5DADA;
+     }
+      button:nth-child(2){
+       background-color: var(--importantcolor);
+       color: white;
+     }
+
+}

@@ -1,0 +1,182 @@
+.container {
+  width: 98%;
+  height: 45%;
+  background-color: white;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.frame {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* object-fit را به cover تغییر دادیم تا تصویر کامل کادر را بپوشاند */
+  object-fit: fill;
+  scale: 1;
+  /* scale و margin اضافی را حذف کردیم تا تصویر بهتر نمایش داده شود */
+}
+
+.swap {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+:global(.slide) {
+  width: 100%;
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  bottom: 25px;
+  right: 80px;
+  font-family: bold;
+  z-index: 20;
+}
+
+.slide {
+  position: relative;
+}
+
+/* استایل پایه برای هر دو دکمه */
+.customButton {
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  z-index: 10;
+  top: 45%;
+  transform: translateY(-50%); /* دکمه ها را دقیقا در وسط عمودی قرار می دهد */
+  padding: 8px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* موقعیت دکمه قبلی */
+.prevButton {
+  left: 15px;
+  rotate: 90deg; /* چرخش برای فلش سمت چپ */
+}
+
+/* موقعیت دکمه بعدی */
+.nextButton {
+  right: 15px;
+  rotate: -90deg; /* چرخش برای فلش سمت راست */
+}
+
+
+/* استایل های مربوط به Pagination برای حالت افقی */
+:global(.swiper-pagination) {
+  position: absolute !important;
+  bottom: -10px !important;
+  left: 10% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important; 
+  gap: 15px;/* عرض خودکار */
+}
+
+:global(.swiper-pagination-bullet) {
+  background: rgba(255, 255, 255, 0.7) !important;
+  width: 7px !important;
+  height: 7px !important;
+  opacity: 1 !important;
+ /* فاصله افقی بین دکمه ها */
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: white !important;
+}
+
+.bottom {
+  height: 80px; /* ارتفاع گرادیانت را کمی افزایش دادیم */
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  border-radius: 0 0 16PX 16PX;
+  pointer-events: none; /* اجازه کلیک از روی گرادیانت را می دهد */
+}
+.sliderTitle {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  color: white;
+  font-size: 24px;
+  font-family: bold;
+  z-index: 20;
+  /* یک سایه ملایم برای خوانایی بهتر روی هر عکسی */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px){
+  .container {
+  
+  height: 35vh;
+
+}
+.sliderTitle{
+  font-size: 14px;
+}
+:global(.swiper-pagination) {
+ 
+  bottom: -10px !important;
+  left: 12% !important;
+  gap: 10px;
+
+}
+.prevButton {
+  left: -10px;
+  rotate: 90deg; /* چرخش برای فلش سمت چپ */
+}
+
+/* موقعیت دکمه بعدی */
+.nextButton {
+  right: -10px;
+  rotate: -90deg; /* چرخش برای فلش سمت راست */
+}
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 98%;
+    height: 22vh;
+  }
+  .caption{
+    font-size: 18px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .customButton{
+    padding: 4px;
+  }
+  .prevButton{
+    left: 5px;
+  }
+  .nextButton{
+    right: 5px;
+  }
+  /* استایل عنوان در موبایل */
+  .sliderTitle {
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px ;
+  }
+  :global(.swiper-pagination){
+    left: 15% !important;
+    bottom: -15px !important;
+  }
+}

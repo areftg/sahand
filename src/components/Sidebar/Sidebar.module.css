@@ -1,0 +1,248 @@
+.sidebar{
+width: 40px;
+height: 87vh;
+background-color: white;
+margin-top: 0px;
+margin-right: 7px;
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 2px;
+transition-duration: 220ms;
+z-index: 12;
+position: absolute;
+right: 5px;
+
+
+
+}
+.infohint{
+    position: absolute;
+    top: 40%;
+    left: 100px;
+    right: 57px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    cursor: pointer;
+   svg{
+        path{
+            filter: drop-shadow(rgba(0, 0, 0, 0.452) 0 0 3px);
+        }
+   }
+}
+.top{
+    width: 100%;
+    display: flex;
+
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 5px;
+    
+    
+}
+.items{
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    direction: rtl;
+    transition-duration: 420ms;
+    font-family: bold;
+    align-items: center;
+    margin-right: 8px;
+ 
+    
+    
+}
+.items p{
+   transition-duration: 650ms;
+   cursor: pointer;
+  
+}
+.items img{
+    width: 25px;
+    
+}
+.sidebaropen{
+    width: 340px;
+    
+    align-items: end;
+    transition-duration: 220ms;
+    padding: 5px;
+    gap: 5px;
+    box-shadow: rgba(0, 0, 0, 0.452) -5px 0 25px;
+   
+}
+.sidebaropen .top .items{
+    background-color: var(--backcolor);
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 10px;
+    margin-right: 0;
+    
+}
+.sidebaropen .top .items p{
+    margin: 0;
+}
+.open{
+  
+    width: 120vw;
+    position: absolute;
+    z-index: 9;
+    height: 150vh;
+    top: -200px;
+    right: 0;
+
+   backdrop-filter: blur(5px);
+}
+.line{
+    background-color: white !important;
+    height: 80% !important;
+    width: 2px !important;
+    margin: 0 5px;
+    padding: 0 !important;
+}
+.bottom{
+    display: flex;
+    color:black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1px;
+ 
+   
+}
+
+.sidebaropen .bottom{
+   background-color: var(--backcolor);
+   border-radius: 12px;
+   padding: 5px 5px;
+   height: 60px;
+   justify-content: space-between;
+   overflow-y: hidden;
+   overflow-x: scroll;
+   font-family: Bold;
+   p{
+    cursor: pointer;
+   }
+   a{
+    color: #fff;
+   }
+}
+
+.sidebaropen .bottom::-webkit-scrollbar{
+    display: none;
+}
+.bottomr{
+    width:fit-content;
+    padding: 5px;
+   
+}
+.bottomr p{
+ margin: 0;
+ width: fit-content;
+ height: 22px;
+ display: inline-block;
+ position: relative;
+ background-color: var(--importantcolor);
+ font-size: 12px;
+ margin-right: 5px;
+ padding: 3px 2px 3px 17px;
+ color: white;
+ border-radius: 4px;
+ 
+}
+.bottomr p img{
+    height: 12px;
+     bottom: 50%;
+     transform: translate(0,50%);
+    position: absolute;
+    left: 3px;
+}
+.bottom h3{
+    font-family: bold;
+    font-size: 15px;
+    margin: 0;
+}
+
+.bigitems{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    direction: rtl;
+    transition-duration: 420ms;
+    font-family: bold;
+    align-items: center;
+    border: 2px solid var(--backcolor);
+    border-radius: 12px;
+    padding-right: 5px;
+    
+    
+}
+.bigitems p{
+   transition-duration: 650ms;
+   cursor: pointer;
+  
+}
+.bigitems img{
+    width: 20px;
+   
+    
+}
+.sidebaropen .top .bigitems{
+    background-color: var(--backcolor);
+    border-radius: 16px;
+    height: fit-content;
+    padding: 0 10px;
+    
+}
+.sidebaropen .top .bigitems p{
+    margin: 0;
+}
+.under{
+        height: 35px;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    direction: rtl;
+    transition-duration: 420ms;
+    font-family: bold;
+    align-items: center;
+    background-color: transparent !important;
+    font-size: 14px;
+    
+    
+}
+.under:nth-child(1){
+    height: 45px;
+    font-size: 16px;
+}
+
+.under:nth-child(1) img{
+ height: 45px;
+}
+
+.sidebaropen .top .bigitems{
+    background-color: var(--backcolor);
+    justify-content: start;
+    padding: 0 10px;
+
+}
+@media screen and (max-width:450px) {
+    .sidebar{
+        display: none;
+    }
+    .infohint{
+        display: none;
+    }
+}

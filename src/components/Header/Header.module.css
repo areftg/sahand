@@ -1,0 +1,406 @@
+.Header {
+    width: 97vw;
+    height: 40px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: flex;
+    padding: 4px;
+    justify-content: space-between;
+    direction: ltr;
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 1px 10px;
+    direction: rtl;
+    position: relative;
+}
+.sjmlogo{
+    height: 35px;
+}
+.logoutparent{
+    cursor: pointer;
+     display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    align-items: center;
+    gap: 5px;
+    font-family: bold;
+    padding: 0 10px;
+    img{
+        height: 20px;
+        width: 20px;
+    }
+}
+.parentleftbox{
+    width: fit-content;
+    height: 20px;
+    padding: 0 5px;
+    margin: 0 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--importantcolor);
+    color: white;
+    font-family: bold;
+    border-radius: 6px;
+    
+}
+
+.rightbox {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.rightbox img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.rightbox img:hover {
+    animation: hover 250ms linear;
+}
+
+.leftbox {
+    width: fit-content;
+    font-family: bold;
+    font-size: 12px;
+    height: 100%;
+    padding: 5px;
+    background-color: var(--importantcolor);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    
+    color: white;
+    rotate: 0;
+}
+.pointer{
+    cursor: pointer;
+}
+
+.leftbox img {
+    height: 20px;
+    padding-right: 5px;
+    rotate: 0;
+}
+
+.Line {
+    height: 80%;
+    width: 2px;
+    background-color: var(--importantcolor);
+    margin: 4px 12px;
+    opacity: 50%;
+}
+
+.hover {
+    position: absolute;
+
+    top: 45px;
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+.hoverl {
+    position: absolute;
+    font-family: bold;
+    box-sizing: content-box;
+    width: fit-content;
+    height: 20px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-color: white;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(5, 0, 0, 1);
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.defaultPanelloading{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+   
+
+}
+.defaultloading{
+    scale: 2;
+}
+.hoverl::after {
+    content: "▲";
+    color: white;
+    position: absolute;
+    top: -6px;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 -2px 1px rgba(0, 0, 0, 0.05));
+}
+
+.iconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    img {
+        cursor: pointer;
+    }
+}
+
+.noDrop{
+    
+}
+
+.iconContainer:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.activeIcon {
+    border: 2px solid var(--importantcolor);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.rightSidePanelContainer {
+    position: fixed;
+    top: 57px;
+    height: fit-content;
+    width: fit-content;
+    min-height: 20%;
+    background-color: #f7f7f7;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    animation: slideInRight 0.3s forwards ease-out;
+    transition-duration: 350ms;
+    direction: rtl;
+    text-align: right;
+    border-radius: 16px;
+
+}
+.LoadingSpinner{
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slideInRight {
+    from {
+        scale: 0.3;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.defaultPanel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.defaultPanel .panelHeader {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.defaultPanel .panelBody {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+
+.profilePanel {
+    width: 100%;
+    height: 100%;
+    font-family: bold;
+
+}
+
+.profilePanelcont {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 15px;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.profilePanelLeft h2 {
+    margin: 0;
+}
+
+.menuicon {
+    display: none;
+}
+
+.profilePanelLeft p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.363);
+    font-size: 12px;
+}
+
+.profilePaneloption {
+    width: 95%;
+    height: 61px;
+    background-color: var(--backcolor);
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+
+
+}
+
+.profilePaneloption p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.profilePanelIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.profilePanelRight {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 12px;
+}
+
+@media screen and (max-width:450px) {
+    .leftbox {
+        font-size: 10px;
+        height: 70%;
+
+    }
+    .logoutparent{
+        p{
+            font-size: 12px;
+        }
+    }
+    .parentleftbox{
+        font-size: 12px;
+    }
+
+    .leftrespons {
+        display: none;
+    }
+
+    .Header {
+        width: 93vw;
+        margin: 0;
+        border-radius: 12px;
+        right: 15px;
+        top: 10px;
+    }
+    .rightbox img {
+        width: 0px;
+        height: 0px;
+        display: none;
+    }
+    .rightbox div {
+        width: 0px;
+        height: 0px;
+        display: none;
+    }
+
+    .rightbox {
+        gap: 5px;
+    }
+
+    .Line {
+        display: none;
+    }
+
+    .menuicon {
+        display: block;
+        margin: 0 10px 0 5px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.settingsPanel {
+    width: 100%;
+    height: 100%;
+    font-family: bold;
+    padding: 20px 5px;
+}
+
+.settingsPanel h3 {
+    margin: 0 20px;
+    font-family: bold;
+}
+
+.settingsPaneloption {
+    width: 95%;
+    height: 61px;
+    background-color: var(--backcolor);
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 12px;
+    cursor: pointer;
+    gap: 5px;
+    padding: 0 10px;
+}
+
+.settingsPaneloption img {
+    height: 30px;
+    width: 30px;
+}
+.sub{
+    height: 30px;
+    width: 30px;
+    svg{
+        width: 35px;
+        height: 35px;
+    }
+}

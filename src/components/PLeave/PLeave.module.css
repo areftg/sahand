@@ -1,0 +1,173 @@
+.PLeave{
+    width: 100%;
+    height: 70vh;
+    font-family: bold;
+    p{
+        margin: 0;
+    }
+}
+.content{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Reason{
+    width: 100%;
+        border-radius: 8px;
+        border: 0;
+        font-family: bold;
+        height: 65%;
+        outline: none;
+        padding: 10px 15px;
+         resize: none;
+         font-size: 16px;
+}
+.history{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input{
+        width: 85%;
+        border-radius: 8px;
+        border: 0;
+        font-family: bold;
+        outline: none;
+        height: 5vh;
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+    p{
+        width: 20%;
+    }
+}
+.right{
+    width: 10%;
+    height: 100%;
+    p{
+        width: 10vw;
+        height: 77%;
+    }
+}
+.left{
+    width: 60%;
+    height: 100%;
+}
+.inputcontainer{
+    display: flex;
+    align-items: center;
+        width: 40%;
+        border-radius: 8px;
+        padding-left: 5px;
+        border: 0;
+        font-family: bold;
+        outline: none;
+        height: 5vh;
+        background-color: white;
+}
+
+
+/* استایل موبایل */
+
+.PleaveMobile{
+    text-align: right;
+        width: 100%;
+    height: 50vh;
+    font-family: bold;
+    p{
+        margin: 0;
+    }
+}
+.input{
+      width: 90%;
+        border-radius: 8px;
+        border: 0;
+        font-family: bold;
+        outline: none;
+        height: 5vh;
+        margin-top: 5px;
+        font-size: 16px;
+}
+.input1{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.mobileInputContainer{
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.mobilecalendercontainer{
+        width:10%;
+        border-radius: 8px;
+        font-family: bold;
+        background-color: var(--importantcolor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 5px 10px;
+        height: 100%;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+}
+ 
+.button{
+    width: 20%;
+    color: white;
+    background-color: var(--importantcolor);
+    font-family: bold;
+    font-size: 20px;
+    border: 0;
+    border-radius: 8px;
+    height: 7vh;
+    margin-top: 15px;
+}
+.buttoncontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.calendercontainer{
+        width:15%;
+        border-radius: 8px;
+        font-family: bold;
+        height: 85%;
+        background-color: var(--importantcolor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 5px;
+        img{
+            width: 25px;
+            height: 25px;
+        }
+}
+@media screen and (max-width: 1024px) {
+    .history{
+        input{
+            width: 80%;
+        }
+    }
+    .calendercontainer{
+        width: 20%;
+    }
+    
+    }
+@media screen and (max-width: 450px) {
+    .button{
+        width: 60%;
+    }
+    
+}

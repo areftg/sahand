@@ -1,0 +1,23 @@
+.backButton{
+  display: none;
+    position: fixed;
+    width: 130px;
+    height: 45px;
+    font-family: bold ;
+    font-size: 18px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 4px solid var(--backcolor);
+    background-color: white;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 13 !important;
+}
+@media screen and (max-width:450px){
+    .backButton{
+     display: flex;
+    }
+}

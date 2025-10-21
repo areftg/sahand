@@ -1,0 +1,234 @@
+.container {
+    overflow: hidden;
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    padding: 20px 70px;
+    color: var(--importantcolor);
+    font-family: bold;
+    a{
+        font-size: 14px !important;
+    }
+}
+.center{
+    width: 100%;
+    height: fit-content;
+}
+.title{
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+.pic {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+}
+
+.pic img {
+    height: 40px;
+}
+
+.pic div {
+    height: 70%;
+    width: 2px;
+    background-color: var(--importantcolor);
+    margin: 0 10px;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: .5em;
+    text-align: center;
+}
+
+.success {
+    background-color: #e6f4ea;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+}
+
+.error {
+    background-color: #fdecea;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+    font-size: .2em;
+}
+
+
+.input {
+    width: 100%;
+    background-color: var(--backcolor);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+}
+
+.input input {
+    width: 100%;
+    border-radius: 7px;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-family: bold;
+}
+
+.error {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.error span {
+    color: rgb(163, 0, 0);
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+
+}
+
+.checkboxWrapper {
+    margin: .5rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--backcolor);
+    justify-content: center;
+}
+
+.checkboxWrapper input[type="checkbox"] {
+    margin-left: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--importantcolor);
+    /* سبز هماهنگ با لوگو */
+    cursor: pointer;
+}
+
+
+.container button {
+    width: 65%;
+    height: 55px;
+    background-color: var(--importantcolor);
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    font-family: bold;
+    font-size: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.container a {
+    color: var(--importantcolor);
+    margin-top: 15px;
+    font-size: 20px;
+}
+.buttoncontainer{
+    width: 100%;
+    margin-bottom: 15px;
+    
+}
+.eyeButton{
+    width: 35px !important;
+    height: 35px !important;
+    position: absolute;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px !important;
+    background-color: var(--backcolor) !important;
+    top: 0;
+    img{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+@media screen and (max-width: 450px){
+    .container {
+        padding: 20px 10px;
+        margin: 0 auto;
+        width: 97%;
+        height: 100%;
+    }
+   .container a{
+    font-size: 13px;
+   }
+    .input {
+        height: 50px;
+        padding: 5px;
+         border-radius: 7px;
+    }
+
+    .input input {
+        font-size: 18px;
+        border-radius: 4px;
+    }
+
+    .container button {
+        height: 40px;
+        font-size: 20px;
+        border-radius: 6px;
+        margin: 0;
+    }
+
+    
+    .title{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .pic img {
+    height: 40px;
+}
+.checkboxWrapper {
+    margin: 0 .5rem;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--backcolor);
+    margin-bottom: 10px;
+    label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.checkboxWrapper input[type="checkbox"] {
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--importantcolor);
+    /* سبز هماهنگ با لوگو */
+    cursor: pointer;
+}
+
+.eyeButton{
+    width: 35px !important;
+    height: 35px !important;
+    position: absolute;
+    left: 7px;
+    
+    top: 7px;
+    img{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+}

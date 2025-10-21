@@ -1,0 +1,147 @@
+.News {
+  width: 100%;
+  height: 55%;
+  background-color: white;
+  border-radius: 16px;
+  margin-top: 15px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  height: 40px;
+  width: 100%;
+  background: linear-gradient(to left, var(--importantcolor), white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  justify-content: space-between;
+
+  font-family: bold;
+}
+.Headerrr{
+  width: fit-content;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   color: blue;
+   font-size: 13px;
+   padding-left: 10px;
+}
+.Headerr{
+  width: fit-content;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+.Headerr p {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.Contents {
+  height: calc(100% - 50px);
+  width: 100%;
+  overflow-y: auto;
+  
+}
+.Contents::-webkit-scrollbar{
+  display: none;
+}
+.n {
+  width: 100%;
+  height: 65px;
+  background-color: var(--backcolor);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  align-items: center;
+  border-radius: 9px;
+  padding: 0 20px;
+  font-family: bold;
+  font-size: 0.9vw;
+  p{
+   white-space: nowrap; /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden; /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+  }
+  
+}
+.showMoreButton{
+    width: 200px ;
+    height: 40px;
+    font-size: 1vw;
+    min-width: 200px;
+      font-family: bold;
+      margin-right: 10px;
+      border: 0;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--importantcolor);
+      color: white;
+     border-radius: 6px;
+     a{
+      color: white;
+         display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+     }
+}
+.no {
+  width: 100%;
+  height: 150px;
+  background-color: var(--backcolor);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-radius: 9px;
+  padding: 25px 20px 10px 20px;
+  font-family: bold;
+  font-size: 1.1vw;
+}
+.no p{
+    margin: 0;
+    height: 40px;
+}
+@media screen and (max-width: 1024px){
+.News{
+  height: 51vh;
+}
+.showMoreButton{
+  width: 120px;
+  min-width: 120px;
+   font-size: 0.8vw;
+}
+}
+
+@media screen and (max-width: 450px){
+  .News{
+    display: none;
+  }
+  .Header{
+              background-color: var(--importantcolor);
+          background-image: none;
+  }
+  .Headerr{
+    img{
+      width: 20px;
+      height: 20px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .Headerrr{
+    img{
+      width: 50px;
+      height: 30px;
+    }
+  }
+}

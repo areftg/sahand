@@ -1,0 +1,66 @@
+.DocumentPart1{
+    text-align: center;
+    width: 100%;
+}
+.container {
+  padding: 30px;
+  background-color: white;
+  border-radius: 16px;
+  width: 40%; 
+  font-family: bold;
+  margin: 0 auto;
+  p{
+    opacity: 30%;
+    margin: 0
+  }
+  h1{
+    margin: 0;
+  }
+}
+.title{
+    font-family: extra-bold;
+}
+.nextButton{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--importantcolor);
+    border: 0;
+    color: white;
+    font-family: bold;
+    border-radius: 8px;
+    width: 13%;
+    font-size: 20px;
+    margin: 25px  auto;
+    img{
+        width: 1.5vw;
+    }
+    p{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1440px){
+  .container{
+    width: 50%;
+  }
+  .nextButton{
+    width: 18%;
+  }
+}
+@media screen and (max-width: 1024px){
+  .DocumentPart1{
+    padding: 85px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .container{
+    width: 65%;
+    p{
+      font-size: 14px;
+    }
+  }
+  .nextButton{
+    width: 25%;
+  }
+}

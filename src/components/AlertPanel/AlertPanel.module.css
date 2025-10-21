@@ -1,0 +1,475 @@
+ .settingsPanel {
+     width: 390px;
+     height: 90%;
+     max-height: 85vh;
+     overflow-y: scroll;
+     font-family: bold;
+     padding: 20px 10px 10px 10px;
+     text-align: center;
+
+     h3 {
+         font-size: 16px;
+     }
+ }
+
+ .settingsPanel::-webkit-scrollbar {
+     display: none;
+ }
+
+ .profilePanelIcon {
+     width: 30px;
+     height: 30px;
+     position: absolute;
+     left: 10px;
+     top: 10px;
+ }
+
+ .toptitle {
+     width: 60px;
+     height: 60px;
+ }
+
+ .disabled {
+     opacity: 0.5;
+ }
+
+ .tabs {
+     width: 100%;
+     height: 50px;
+     display: flex;
+     gap: 5px;
+     padding: 5px 5px;
+     margin-bottom: 5px;
+
+     p {
+         background-color: var(--backcolor);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 5px;
+         width: 100%;
+         height: 35px;
+         border-radius: 6px;
+         margin: 0;
+     }
+
+     .navButton {
+         background-color: var(--backcolor);
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 35px;
+         width: 45px;
+         border-radius: 6px;
+         border: 0;
+
+         img {
+             height: 35px;
+             width: 35px;
+         }
+
+     }
+
+
+ }
+
+ .deleteTabIcon {
+     height: 35px;
+     width: 35px;
+     padding: 7px;
+     border-radius: 4px;
+     background-color: var(--importantcolor);
+ }
+
+ .alerterror {
+     background-color: #fdecea;
+     color: #c62828;
+     border: 1px solid #ef9a9a;
+     border-radius: 12px;
+     padding: 5px;
+ }
+
+ .alarmError {
+     border: 1px solid #e53e3e;
+     /* بوردر قرمز رنگ */
+     background-color: #fff5f5;
+     /* پس‌زمینه قرمز خیلی روشن */
+     box-shadow: 0 0 5px rgba(229, 62, 62, 0.5);
+     /* یک سایه ملایم برای تاکید بیشتر */
+     transition: all 0.2s ease-in-out;
+ }
+
+ .alerterror {
+     color: #e53e3e;
+     background-color: #fed7d7;
+     border: 1px solid #f56565;
+     padding: 10px;
+     border-radius: 8px;
+     text-align: center;
+     margin-bottom: 15px;
+ }
+
+ .settingsPanel h3 {
+     margin: 0;
+     margin-top: 5px;
+ }
+
+ .button {
+     width: 100%;
+     height: 35px;
+     background-color: var(--backcolor);
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 12px;
+     cursor: pointer;
+     font-family: bold;
+     border: 0;
+     font-size: 13px;
+ }
+
+ .m {
+     margin-bottom: 5px;
+ }
+
+ .green {
+     background-color: var(--importantcolor);
+     color: white;
+ }
+
+ .first {
+     margin-bottom: 5px;
+ }
+
+ .alarms {
+     width: 100%;
+     height: 40px;
+     border-radius: 12px;
+     background-color: var(--backcolor);
+     margin-top: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0px 5px;
+     position: relative;
+ }
+
+ .delete {
+
+
+     border-radius: 6px;
+     display: flex;
+     align-items: center;
+     justify-content: start;
+
+
+     transition: opacity 0.3s ease;
+     margin: 0;
+     transition-duration: 550ms;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition-duration: 550ms;
+     background-color: var(--importantcolor);
+     height: 35px;
+     width: 35px;
+     transition-duration: 550ms;
+ }
+
+ .delete img {
+     width: 20px;
+     height: 20px;
+     display: block;
+ }
+
+ .datetimeslot {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 10px;
+     background-color: var(--backcolor);
+     height: 50px;
+     border-radius: 8px;
+     width: 100%;
+     margin-bottom: 5px;
+     flex-direction: row-reverse;
+
+     .datetimeslotbutton {
+         border: 0;
+         height: 30px;
+         width: fit-content;
+         padding: 0 5px;
+         background-color: var(--importantcolor);
+         color: white;
+         font-family: bold;
+         border-radius: 4px;
+     }
+ }
+
+ /* .alarms:hover .delete {
+    display: flex;
+     transition-duration: 550ms;
+     background-color: var(--importantcolor);
+     height:35px;
+    width: 35px;
+      transition-duration: 550ms;
+     img{
+        display: block;
+     }
+} */
+
+ .name {
+     margin: 0;
+     font-size: .8em;
+ }
+
+ .alarmoff {
+     opacity: 50%;
+     pointer-events: none;
+ }
+
+ .alarmcont {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+ }
+
+
+ .togglebutton {
+     width: 80px;
+     /* عرض کلید */
+     height: 34px;
+     /* ارتفاع کلید */
+     background-color: #f8f8f8;
+     /* رنگ پس‌زمینه در حالت خاموش */
+     border-radius: 17px;
+     /* گرد کردن گوشه‌ها */
+     position: relative;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     padding: 4px;
+     margin-left: 10px;
+     box-sizing: border-box;
+     transition: background-color 0.3s ease-in-out;
+ }
+
+ /* استایل دایره سفیدرنگ داخل کلید */
+ .circle {
+     width: 26px;
+     /* قطر دایره */
+     height: 26px;
+     /* قطر دایره */
+     background-color: var(--importantcolor);
+     border-radius: 50%;
+     /* کاملا گرد */
+     position: absolute;
+     left: 4px;
+     /* موقعیت اولیه در حالت خاموش */
+     transition: transform 0.3s ease-in-out;
+ }
+
+ /* استایل برای حالت روشن (وقتی کلاس .on اضافه می‌شود) */
+ .togglebutton.on {
+     background-color: var(--importantcolor);
+     /* رنگ سبز برای حالت روشن */
+ }
+
+ /* حرکت دادن دایره به سمت راست در حالت روشن */
+ .togglebutton.on .circle {
+     transform: translateX(45px);
+     background-color: white;
+ }
+
+ /* استایل متن‌ها */
+ .onText,
+ .offText {
+     font-size: 12px;
+     font-weight: bold;
+     color: white;
+     position: absolute;
+     /* جلوگیری از انتخاب متن یا اختلال در کلیک */
+     user-select: none;
+
+     transition: opacity 0.3s ease-in-out;
+ }
+
+ /* استایل متن "روشن" */
+ .onText {
+     left: 12px;
+
+ }
+
+ /* نمایش متن "روشن" در حالت روشن */
+ .togglebutton.on .onText {
+     opacity: 1;
+ }
+
+ /* استایل متن "خاموش" */
+ .offText {
+     right: 8px;
+
+     color: var(--importantcolor);
+     /* رنگ تیره‌تر برای خوانایی بهتر در پس‌زمینه خاکستری */
+ }
+
+ /* مخفی کردن متن "خاموش" در حالت روشن */
+ .togglebutton.on .offText {
+     opacity: 0;
+ }
+
+
+
+ /* استایل یک گزینه‌ی تنها با ظاهر رادیو باتن */
+ .radioOption {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     position: absolute;
+     right: 5px;
+     z-index: 5;
+     border-radius: 8px;
+     transition: background-color 0.2s ease;
+     user-select: none;
+
+ }
+
+
+
+ /* دایره بیرونی */
+ .radioOuterCircle {
+     width: 22px;
+     height: 22px;
+     border: 2px solid var(--importantcolor);
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: 12px;
+     transition: border-color 0.3s ease;
+ }
+
+ /* دایره داخلی (نقطه انتخاب) */
+ .radioInnerCircle {
+     width: 12px;
+     height: 12px;
+     background-color: var(--importantcolor);
+     border-radius: 50%;
+     transform: scale(0);
+     /* در حالت خاموش، اندازه‌اش صفر است (مخفی) */
+     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+     /* انیمیشن فنری */
+ }
+
+ .radioLabel {
+     color: #333;
+     font-size: 16px;
+     font-weight: 500;
+ }
+
+
+ .radioOption.selected .radioOuterCircle {
+     border-color: var(--importantcolor);
+ }
+
+ .radioOption.selected .radioInnerCircle {
+     transform: scale(1);
+     /* نمایش نقطه داخلی */
+ }
+
+ .radioOption.selected .radioLabel {
+     color: #000;
+ }
+
+ .butcont {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     padding-top: 5px;
+
+     .button:nth-child(1) {
+         color: black;
+         width: 100%;
+         background-color: var(--backcolor);
+         font-size: 17px;
+         height: 55px;
+         direction: ltr;
+
+         div {
+             width: 35px;
+             height: 35px;
+             background-color: var(--importantcolor);
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 4px;
+             margin-left: 5px;
+
+             p {
+                 background-color: white;
+                 border-radius: 99px;
+                 width: 25px;
+                 height: 25px;
+                 color: var(--importantcolor);
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 font-size: 40px;
+                 margin: 0;
+                 padding-top: 5px;
+             }
+         }
+     }
+
+     .button:nth-child(2) {
+         width: 100%;
+         border: 0;
+         font-family: bold;
+         font-size: 16px;
+     }
+ }
+
+ @media screen and (max-height:600px) {
+     .profilePanelIcon {
+         width: 30px;
+         height: 30px;
+
+     }
+
+     .toptitle {
+         width: 40px;
+         height: 40px;
+         font-size: 1.2em;
+     }
+
+     .button {
+
+         height: 40px;
+
+     }
+
+     .alarms {
+         width: 100%;
+         height: 50px;
+     }
+
+     .button:nth-child(1) {
+         color: black;
+         width: 100%;
+         background-color: var(--backcolor);
+         font-size: 1.2em;
+         height: 45px !important;
+     }
+
+     .settingsPanel {
+         width: 380px;
+         height: 90%;
+         font-family: bold;
+         padding: 10px 10px 10px 10px;
+         text-align: center;
+
+     }
+ }

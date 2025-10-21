@@ -1,0 +1,362 @@
+.PLastRecord h1 {
+  font-family: Bold;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.Page{
+  overflow-y: auto;
+  height: 74vh;
+  display: flex;
+  justify-content: center;
+}
+.Page::-webkit-scrollbar {
+    display: none;
+}
+.reportCardPage {
+  width: 22cm;
+  height: fit-content;
+  direction: rtl;
+  font-family: bold;
+  color: black;
+  background: white;
+  padding: 0.5cm;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  row-gap: 10px;
+}
+
+
+.schoolInfo {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.schoolLogo {
+  width: 22px;
+  margin-bottom: 4px;
+}
+.schoolInfo h4, h6, h3 {
+  margin: 0 !important;
+  text-wrap: nowrap;
+}
+.schoolInfo h4{
+    font-size: 11px;
+}
+.schoolInfo h6 {
+    font-size: 9px;
+}
+.schoolInfo h3{
+    font-size: 12px;
+}
+
+.studentDetails {
+  flex-grow: 1;
+}
+.studentDetails table {
+    width: 100%;
+    border-spacing: 5px 0;
+    border-collapse: separate;
+}
+.studentDetails td {
+  padding: 12px 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.studentDetails td p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 12px;
+    font-family: Bold;
+    position: relative;
+}
+.studentDetails td p::before {
+  content: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 0;
+}
+.studentDetails td p span {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  padding: 0 2px;
+}
+.label {
+  white-space: nowrap;
+}
+.value {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.studentPhotoContainer {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px;
+  width: 2.5cm;
+  height: 3cm;
+}
+.studentPhoto {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+
+/* --- بخش سربرگ (Header) --- */
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tborderright{
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    p {
+        margin: 0;
+        transform: rotateZ(-90deg);
+        font-size: 10px;
+    }
+}
+.tbordercenter{
+    border-top: 0 !important;
+    border-right: 0 !important;
+}
+.tborderleft{
+  border-left: 0 !important;
+  border-top: 0 !important;
+}
+.tborderlefter{
+    border-top: 0 !important;
+    border-left: 0 !important;
+}
+
+/* --- بخش اصلی (جدول نمرات) --- */
+.gradesSection {
+  background-color: white;
+  border: black 1px solid;
+  border-radius: 8px;
+}
+
+.gradesTable {
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+.borderright{
+    border: 0 !important;
+}
+.bordercenter{
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+}
+.borderleft{
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+}
+.borderlefter{
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+}
+.content {
+    background: var(--backcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 4px;
+    border-radius: 0.2rem;
+    height: 100%;
+}
+
+.gradesTable th,
+.gradesTable td {
+  border: 1px solid #606060;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 0.3rem;
+  font-size: 9pt;
+}
+
+/* --- بخش پابرگ (Footer) --- */
+.reportFooter{
+    width: 100%;
+    direction: ltr;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--importantcolor);
+    padding: 30px;
+    border-radius: 8px;
+    row-gap: 0.4vw;
+    .first {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1vw;
+        .LL {
+            width: 28%;
+        }
+        .poet {
+            width: 43%;
+        }
+        .RL {
+            width: 28%;
+        }
+    }
+    .second {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5vw;
+        .logos {
+            width: 35%;
+        }
+        p {
+            font-size: 10px;
+            color: #fff;
+            direction: rtl;
+        }
+    }
+}
+
+
+/* responsive 450px */
+@media screen and (max-width: 450px) {
+  .PLastRecord h1 {
+    font-family: Bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+  }
+
+  .reportCardPage {
+    width: 11cm;
+    padding: 0.3cm;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    row-gap: 4px;
+  }
+
+  .schoolInfo {
+    padding: 3px 9px;
+  }
+  .schoolLogo {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0;
+  }
+  .schoolInfo h4{
+    font-size: 6px;
+  }
+  .schoolInfo h6 {
+    font-size: 5px;
+  }
+  .schoolInfo h3{
+    font-size: 7px;
+  }
+
+  .studentDetails table {
+    border-spacing: 3px 0;
+  }
+  .studentDetails td {
+    padding: 5px 10px;
+  }
+  .studentDetails td p{
+    font-size: 7px;
+  }
+  .studentDetails td p span {
+    padding: 0 1px;
+  }
+
+  .studentPhotoContainer {
+    padding: 3px;
+    width: 2cm;
+    height: 1.65cm;
+  }
+  .studentPhoto {
+    height: 100%;
+    width: 100%;
+    display: block;
+    font-size: 0.6em;
+  }
+
+  .gradesTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7pt;
+    height: 100%;
+  }
+  .gradesTable th,
+  .gradesTable td {
+    padding: 5px 4px;
+  }
+  .content {
+      background: var(--backcolor);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 0;
+      border-radius: 0.2rem;
+  }
+
+  .reportFooter{
+    padding: 20px 30px;
+    .second {
+      column-gap: 1vw;
+        p {
+            font-size: 6px;
+        }
+    }
+  }
+}
+
+/* --- استایل مخصوص پرینت --- */
+@media print {
+  /* تمام استایل‌های ظاهری صفحه وب را حذف می‌کند */
+  body {
+    background-color: #fff;
+  }
+  .reportCardPage {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+  
+  /* اطمینان از اینکه فقط کارنامه پرینت گرفته می‌شود */
+  body * {
+    visibility: hidden;
+  }
+  .reportCardPage, .reportCardPage * {
+    visibility: visible;
+    size: A4;
+  }
+  .reportCardPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

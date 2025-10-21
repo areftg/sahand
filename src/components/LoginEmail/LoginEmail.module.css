@@ -1,0 +1,25 @@
+.container{
+    display: none;
+}
+.line{
+    height: 100%;
+    width: 2px;
+    background-color: white;
+}
+@media screen and (max-width: 450px){
+    .container{
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    width: 100%;
+    height: 50px;
+    border: 5px solid white;
+    background-color: var(--importantcolor);
+    border-radius: 16px;
+    margin-top: 5px;
+    font-family: bold;
+    color: white;
+    padding: 5px;
+}
+}

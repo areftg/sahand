@@ -1,0 +1,76 @@
+.calendar {
+  direction: rtl;
+  font-family: bold;
+  color: black; 
+ 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  
+  cursor: pointer;
+ 
+
+  margin: 0 10px;
+        display: flex;
+  align-items: center;
+
+}
+.Yearname{
+    font-size: 21px;
+}
+.headerr{
+      display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+td.holiday {
+  color: red;
+}
+
+.popupWrapper {
+  max-height: 350px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.today {
+  background-color: var(--backcolor);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+

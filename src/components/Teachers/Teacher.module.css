@@ -1,0 +1,443 @@
+.container{
+    width: 100%;
+     height: 85vh;
+     background-color: white;
+     margin-top: 25px;
+     border-radius: 16px;
+     padding: 10px;
+     font-family: bold;
+}
+.header{
+    width: 100%;
+    min-height: 30px;
+    background-image: linear-gradient( to left , var(--importantcolor) 1% , white );
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 45px;
+    h1{
+        margin: 0;
+    }
+}
+.right{
+    font-family: extra-bold;
+    display: flex;
+    align-items: center;
+    p{
+        margin: 0;
+        margin-right: 15px;
+    }
+    h1{
+        margin-right: 15px;
+    }
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.filter{
+    color: black;
+    display: flex;
+    p{
+        margin: 0;
+        margin-right: 5px;
+    }
+}
+.search{
+    background-color: white;
+    padding: 5px;
+    width: 400px;
+    border: 2px solid var(--backcolor);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+}
+.displaynone{
+    display: none !important;
+}
+.search input{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    font-family: bold;
+    outline: 0;
+}
+.table{
+    overflow-y: scroll;
+    max-height: 68vh;
+    padding-bottom: 100px;
+}
+.table::-webkit-scrollbar{
+    width: 10%;
+}
+.row{
+    padding: 10px;
+    width: 100%;
+    background-color: var(--backcolor);
+    margin-top: 10px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.item{
+    width: 20%;
+    height: fit-content;
+    padding: 12px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+            font-size: 20px;
+             white-space: nowrap;
+    /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+    overflow: hidden;
+    /* متنی که از کادر بیرون زده را پنهان می‌کند */
+    text-overflow: ellipsis;
+    p{
+        margin: 0;
+         
+    
+    }
+}
+.item:nth-child(1){
+    width: 20%;
+}
+.item:nth-child(2){
+    width: 20%;
+}
+.item:nth-child(4){
+    width: 15%;
+    justify-content: right;
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    background-color: var(--outbutton);
+    margin-left: 5px;
+}
+.delete{
+    color: white;
+    width: 10%;
+    padding: 5px;
+    background-color: var(--importantcolor);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    font-size: 20px;
+ cursor: pointer;
+    p{
+        margin: 0;
+        margin-right: 5px; 
+    }
+}
+.edit{
+    color: white;
+    width: 10%;
+    padding: 5px;
+    background-color: var(--importantcolor);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+     cursor: pointer;
+            font-size: 20px;
+    p{
+        margin: 0;
+        margin-right: 5px; 
+    }
+}
+.item p {
+  margin: 0;
+  white-space: nowrap;
+
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* فقط اگه متن از فیلد بیرون زده باشه */
+.scrollable:hover {
+  animation: scrollText 6s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .right{
+        h1{
+            font-size: 22px;
+            margin-right: 5px;
+        }
+        p{
+            font-size: 14px;
+             margin-right: 5px;
+        }
+    }
+
+    .filter{
+        width: 22%;
+    }
+    .search{
+        width: 250px;
+    }
+        .item{
+        font-size: 14px;
+    }
+    .delete{
+        font-size: 16px;
+        img{
+            width: 16px;
+        }
+    }
+    .edit{
+        font-size: 16px;
+        img{
+            width: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header{
+        h1{
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        p{
+            margin-right: 8px;
+            font-size: 12px;
+        }
+    }
+    .filter{
+        width: 20%;
+    }
+    .search{
+        width: 200px;
+    }
+    .search input{
+        font-size: 12px;
+    }
+    .item{
+        font-size: 14px;
+    }
+    .delete{
+        font-size: 16px;
+        img{
+            width: 16px;
+        }
+    }
+    .edit{
+        font-size: 16px;
+        img{
+            width: 16px;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .container{
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 8px;
+    }
+    .header{
+        background-image: none;
+        background-color: var(--importantcolor);
+        border-radius: 4px;
+        svg{
+            display: none;
+        }
+        img{
+            display: none;
+        }
+        p{
+            display: none;
+        }
+        h1{
+            font-family: bold;
+            font-size: 18px;
+        }
+    }
+    .displaynone{
+    display: flex !important;
+}
+    .left{
+        justify-content: center;
+        width: 50px;
+    }
+        .row{
+        height: 40px;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .item{
+        height: 100%;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    .item:nth-child(3){
+        width: 43%;
+    }
+    .item:nth-child(4){
+        width: 25%;
+        justify-content: center;
+    }
+      .item:nth-child(5){
+        width: 18%;
+    }
+    .delete{
+        border-radius: 4px;
+        p{
+            display: none;
+        }
+    }
+    .display{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .edit{
+        p{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .item:nth-child(3){
+        width: 40%;
+    }
+    .item:nth-child(4){
+        width: 25%;
+    }
+      .item:nth-child(5){
+        width: 20%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 5px;
+        margin-top: 8px;
+        border-radius: 4px;
+    }
+    .header h1 {
+        font-size: 14px;
+    }
+    .row {
+        height: 30px;
+        padding: 2px;
+        margin-top: 2px;
+        border-radius: 2px;
+    }
+    .item {
+        font-size: 10px;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    .item:nth-child(3) {
+        width: 35%;
+    }
+    .item:nth-child(4) {
+        width: 35%;
+    }
+    .item:nth-child(5) {
+        width: 15%;
+    }
+     .delete{
+        border-radius: 4px;
+        p{
+            display: none;
+        }
+    }
+    .display{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .edit {
+        font-size: 12px;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    .checkbox{
+        height: 15px;
+        margin-left: 1px;
+    }
+}
+
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 8px;
+    background-color: white;
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    padding: 10px 8px;
+    width: 250px;
+}
+
+.searchBox img {
+    width: 16px;
+    height: 16px;
+}
+
+/* استایل برای چک‌باکس */
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkbox.checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* کلاس‌های کمکی برای نمایش پیام‌ها */
+.errorText, .emptyText {
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.errorText {
+    color: #d9534f;
+    background-color: #f2dede;
+}

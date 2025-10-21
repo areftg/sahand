@@ -1,0 +1,57 @@
+.button {
+    width: fit-content;
+    height: 45px;
+    font-size: 22px;
+    font-family: bold;
+    background-color: var(--importantcolor);
+    border: 0;
+    color: white;
+    padding: 0 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.conbutton {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.constep {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.step {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 28px;
+    font-family: bold;
+    color: #333;
+    display: inline-block;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+.content {
+    height: 70vh;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}

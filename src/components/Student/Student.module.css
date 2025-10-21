@@ -1,0 +1,258 @@
+.container{
+    width: 100%;
+     height: 85vh;
+     background-color: white;
+     margin-top: 10px;
+     border-radius: 16px;
+     padding: 10px;
+     font-family: bold;
+}
+.header{
+    width: 100%;
+    min-height: 30px;
+    background-image: linear-gradient( to left , var(--importantcolor) 1% , white );
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    h1{
+        margin: 0;
+    }
+}
+.right{
+    font-family: extra-bold;
+    display: flex;
+    align-items: center;
+    p{
+        margin: 0;
+        margin-right: 15px;
+    }
+    h1{
+        margin-right: 15px;
+    }
+}
+.left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.filter{
+    width: 100%;
+    color: black;
+    display: flex;
+    p{
+        margin: 0;
+        margin-right: 5px;
+    }
+}
+    .displayon{
+        display: none;
+    }
+.table{
+    overflow-y: scroll;
+    height: 68vh;
+    padding-bottom: 300px;
+    min-height: 300px;
+}
+.table::-webkit-scrollbar{
+    width: 10%;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .right{
+        h1{
+            font-size: 22px;
+            margin-right: 5px;
+        }
+        p{
+            font-size: 14px;
+             margin-right: 5px;
+        }
+    }
+    .left{
+         justify-content: space-between;
+         width: 40%;
+    }
+    .filter{
+        width: 22%;
+    }
+    .search{
+        width: 250px;
+    }
+        .item{
+        font-size: 14px;
+    }
+    .item input{
+        font-size: 14px;
+    }
+    .delete{
+        font-size: 14px;
+        img{
+            width: 16px;
+        }
+    }
+    .edit{
+        font-size: 14px;
+        img{
+            width: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .row{
+        padding: 8px;
+    }
+    .header{
+        h1{
+            font-size: 20px;
+            justify-content: space-between;
+        }
+        p{
+            margin-right: 8px;
+            font-size: 12px;
+        }
+    }
+    .left{
+        width: 55% ;
+        justify-content: left;
+    }
+    .filter{
+        width: 20%;
+    }
+    .search{
+        width: 200px;
+    }
+    .search input{
+        font-size: 12px;
+    }
+    .item{
+        font-size: 12px;
+        padding: 10px;
+        input{
+            font-size: 12px;
+            padding: 10px;
+        }
+    }
+    .delete{
+        font-size: 11px;
+        img{
+            width: 16px;
+        }
+    }
+    .edit{
+        font-size: 16px;
+        img{
+            width: 16px;
+        }
+    }
+    .editPresent{
+        p{
+            font-size: 12px;
+        }
+    }
+    .checkboxPresent{
+        height: 25px;
+        width: 27px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        img{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .editAbsent{
+          p{
+            font-size: 12px;
+        }
+    }
+     .checkboxAbsent{
+        height: 25px;
+        width: 27px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        img{
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+     .container{
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 8px;
+     }
+     .header{
+        background-image: none;
+        background-color: var(--importantcolor);
+        border-radius: 4px;
+        svg{
+            width: 18px;
+            height: 18px;
+        }
+        p{
+            display: none;
+        }
+        h1{
+            font-family: bold;
+            font-size: 10px;
+        }
+    }
+    .item{
+        border-radius: 4px;
+        padding: 5px;
+        height: 100%;
+              font-size: 12px;
+        input{
+        padding: 5px;
+        font-size: 12px;
+        }    
+    }
+        .row{
+        height: 40px;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+        .displayon{
+        display: inline;
+    }
+    .display{
+        display: none;
+    }
+    .left{
+        justify-content: center;
+        width: 20%;
+    }
+     
+}
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 5px;
+        margin-top: 8px;
+        border-radius: 4px;
+    }
+    .header {
+        padding: 2px;
+        h1 {
+            font-size: 8px;
+        }
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+    .left {
+        width: 20%;
+        justify-content: center;
+    }
+  
+}

@@ -1,0 +1,353 @@
+.App {
+  text-align: center;
+  background-color: var(--backcolor);
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  padding-right: 45px;
+  padding-top: 55px;
+  direction: rtl;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+
+
+.App-Container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.Main-Content {
+  width: 90vw;
+  height: 100vh;
+  padding: 15px 5px 0 0;
+}
+
+.App::after {
+  content: "";
+  background-image: url(./assets//icons/sjm-logo-green.svg);
+  position: fixed;
+  background-repeat: no-repeat;
+  width: 1400px;
+  background-size: contain;
+  left: -100px;
+  bottom: -80px;
+  height: 840px;
+  opacity: 20%;
+  z-index: -1 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+.Toastify__toast-container--top-right {
+  top: 80px;
+  right: 200px;
+  width: 380px;
+  max-width: 90%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Toastify__toast {
+  background-color: white !important;
+  color: #000000;
+  border-radius: 15px;
+  box-shadow: none !important;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  min-height: 80px;
+  font-family: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 400px;
+  font-family: bold;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 20px 1px !important;
+  position: relative;
+}
+
+.Toastify__progress-bar {
+  background-color: var(--backcolor);
+  height: 4px !important;
+
+  /* Make it slightly transparent */
+  opacity: 0.9 !important;
+
+  /* Remove the default box-shadow if you don't like it */
+  box-shadow: none;
+
+  /* Use a gradient for a modern look */
+  background: linear-gradient(to right, var(--backcolor), var(--importantcolor)) !important;
+
+}
+
+/* Green progress bar for success toasts */
+
+
+.Toastify__toast--warning {
+  background-color: white;
+  color: black !important;
+  justify-content: space-between;
+}
+
+.Toastify__toast--success {
+  background-color: white;
+  color: black !important;
+  justify-content: space-between;
+}
+
+.Toastify__toast--info {
+  background-color: white;
+  color: black !important;
+  justify-content: space-between;
+
+}
+
+.Toastify__toast--error {
+  background-color: white;
+  color: black !important;
+  justify-content: space-between;
+}
+
+.Toastify__toast--no-internet {
+  background-color: white;
+  color: black;
+  justify-content: space-between;
+}
+
+.Toastify__toast-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  right: -90px;
+  z-index: 30;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px 1px !important;
+}
+
+.Toastify__toast-icon svg,
+.Toastify__toast-icon img {
+  width: 40px !important;
+  height: 40px;
+  display: block;
+}
+
+.Toastify__close-button {
+  order: -1;
+  margin-right: 20px;
+  margin-left: 0;
+  align-self: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #9E9E9E;
+  font-size: 20px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+.Toastify__close-button img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.Toastify__toast-body {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Toastify__toast-body>div {
+  width: 100%;
+}
+
+.Toastify__toast-body button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  align-self: flex-end;
+  transition: background-color 0.2s ease;
+}
+
+.Toastify__toast-body button:hover {
+  background-color: #1976D2;
+}
+
+.notif-message {
+
+  box-shadow: black 2px 4px 2px 2px;
+  width: 400px !important;
+
+}
+.notif-close-but{
+   cursor: pointer;
+   width: 40px;
+   height:  40px ;
+
+}
+
+@media screen and (max-width:450px) {
+  .App::after {
+    width: 200px;
+  }
+
+  .Main-Content {
+    padding: 5px !important;
+    width: 96.5%;
+  }
+
+  .App {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .mobile-back{
+    display: flex;
+  
+  }
+
+  
+.Toastify__toast-container--top-right {
+  top: 65px;
+  left: 50% !important;
+  transform: translate(-50%);
+  width: 100% !important;
+ 
+
+ 
+}
+.notif-message {
+
+
+  width: 300px !important;
+}
+
+.Toastify__toast {
+  background-color: white !important;
+  color: #000000;
+  border-radius: 8px;
+  box-shadow: none !important;
+  padding: 10px 10px;
+  margin-bottom: 15px;
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  min-height: 50px;
+  font-family: bold;
+  font-size: 12px;
+  line-height: 1.5;
+  width: calc(100% - 65px);
+  height: 60px;
+  font-family: bold;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 20px 1px !important;
+  position: relative;
+}
+.Toastify__toast-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  right: -65px;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px 1px !important;
+}
+.notif-close-but{
+  height: 30px;
+  width: 30px;
+}
+
+}
+
+@media screen and (max-width:1024px) {
+
+  .Main-Content {
+    padding: 20px 20px 20px 0;
+  }
+
+}
+
+
+@page {
+  size: A4 portrait;
+  margin: 0; /* حاشیه توسط خود کامپوننت مدیریت می‌شود */
+}
+
+/* --- استایل مخصوص پرینت --- */
+@media print {
+
+  /* ریست کردن استایل‌های ظاهری صفحه */
+  body {
+    background-color: #fff;
+  }
+
+  /* مخفی کردن تمام عناصر صفحه */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* و سپس نمایان کردن فقط بخشی که می‌خواهیم پرینت شود */
+  .printableArea, .printableArea * {
+    visibility: visible;
+  }
+  
+  /* قرار دادن بخش قابل چاپ در گوشه بالا سمت چپ صفحه پرینت */
+  .printableArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15mm; /* حاشیه داخلی برای چاپ */
+    box-shadow: none;
+    border: none;
+  }
+
+  /* مخفی کردن دکمه پرینت و سایر عناصر غیرضروری */
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}

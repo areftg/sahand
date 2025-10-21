@@ -1,0 +1,82 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: white;
+   
+    
+}
+.back{
+ background-image: linear-gradient(to bottom, #dbe3e3 , var(--importantcolor));
+  width: 100vw;
+    height: 100vh;
+       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    font-family: extra-bold;
+    gap: 20vh;
+    padding-top:25vh;
+    color: white;
+    
+    img{
+      width: 25vw;
+    }
+    h2{
+      font-size: 18px;
+     
+    }
+}
+.spiner{
+  scale: 1.2;
+}
+.container:after {
+  content: "";
+  background-image: url(../../assets/icons/sjm-logo-green.svg);
+  position: fixed;
+  background-repeat: no-repeat;
+  width: 1200px;
+  background-size: contain;
+  left: -100px;
+  bottom: -80px;
+  height: 640px;
+  opacity: 20%;
+  z-index: 9999 !important;
+}
+
+@media screen and (max-width:450px) {
+ .title{
+margin-top: 40vh;
+width: 500px;
+
+ }
+
+ .back{
+ background-image: linear-gradient(to bottom, #dbe3e3 , var(--importantcolor));
+    gap: 20vh;
+    padding-top:25vh;
+    color: white;
+    
+    img{
+      width: 50vw;
+    }
+    h2{
+      font-size: 18px;
+     
+    }
+}
+.container:after{
+  display: none;
+}
+
+
+}

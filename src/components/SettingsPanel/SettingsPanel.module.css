@@ -1,0 +1,39 @@
+.settingsPanel {
+    width: 300px;
+    height: 100%;
+    font-family: bold;
+    padding: 20px 5px 5px 5px;
+}
+
+.settingsPanel h3 {
+    margin: 0 20px;
+    font-family: bold;
+}
+.profilePanelIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+
+.settingsPaneloption {
+    width: 95%;
+    height: 45px;
+    background-color: var(--backcolor);
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 12px;
+    cursor: pointer;
+    gap: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.settingsPaneloption img {
+    height: 30px;
+    width: 30px;
+}

@@ -1,0 +1,373 @@
+
+
+
+/* استایل‌دهی مودال */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    font-family: bold;
+   
+}
+.field-title{
+    background-color: var(--importantcolor);
+    height: 40px;
+    width: 80%; 
+    margin: 0 auto;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    p{
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    p:first-child{
+        border-left: 4px white solid;
+    }
+    
+}
+
+
+.modal-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 1200px;
+    height: 70vh;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+
+/* استایل‌دهی هدر */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.modal-header-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    width: fit-content;
+    color: #333;
+}
+
+
+.upload-form{
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.upload-input{
+    display: none;
+}
+.upload-button{
+    width: 150px;
+    height: 40px;
+    background-color: var(--importantcolor);
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    font-family: bold;
+}
+.upload-text{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--backcolor);
+     border-radius: 8px;
+}
+.drop-zone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    gap: 5px;
+}
+
+
+.modal-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+     display: inline-block;
+    width: fit-content;
+}
+
+.modal-header span {
+    font-size: 0.8rem;
+    color: #888;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.close-button {
+
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+     background-color: var(--importantcolor);
+     border-radius: 12px;
+
+}
+.info-button{
+    border: 0;
+    background-color: var(--importantcolor);
+    height: 40px;
+    width: 10%;
+    font-size: 22px;
+    font-family: bold;
+    color: white;
+    border-radius: 12px;
+}
+/* استایل‌دهی بدنه مودال */
+.modal-body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+.field-list-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 25%;
+    direction: ltr;
+    position: relative;
+}
+.field-list-left{
+      display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 25%;
+    position: relative;
+}
+
+.field-list-left .field-item{
+    background-color: var(--backcolor);
+}
+.field-item {
+    background-color: var(--backcolor);
+    
+    padding: 12px 16px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: 3;
+}
+
+.field-item:hover {
+    background-color: #f0f0f0;
+  
+}
+
+.field-item.connected {
+    background-color: var(--backcolor);
+    border-color: var(--importantcolor);
+}
+
+.field-item.connecting {
+ 
+    background-color: var(--backcolor);
+}
+
+.field-name {
+    font-weight: 500;
+
+}
+
+/* دکمه‌های اتصال */
+.connect-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    position: absolute;
+   z-index: 5;
+    
+}
+
+.connect-button.left {
+    background-color: var(--importantcolor);
+ 
+        right: -15px;
+ 
+
+}
+
+.connect-button.right {
+    background-color: #ddd;
+ 
+    font-size: 0;
+       left: -15px;
+ 
+ 
+}
+.connectingg  .connect-button{
+    background-color: white !important;
+    border: 7px solid var(--importantcolor);
+}
+.connectedd  .connect-button{
+    background-color: white !important;
+    border: 7px solid var(--importantcolor);
+}
+
+.field-item:hover .connect-button.right {
+    background-color:  var(--importantcolor);
+
+}
+
+.field-item.connected .connect-button.right {
+    background-color: var(--importantcolor);
+
+}
+
+.field-item.connected .connect-button.left {
+    background-color: var(--importantcolor);
+
+}
+
+/* ناحیه اتصالات SVG */
+.connection-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+     z-index: 1; 
+}
+
+.connection-svg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+   
+}
+
+.connection-line {
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+
+
+
+.save-button {
+    background-color: var(--importantcolor);
+    color: white;
+    border: none;
+    
+    border-radius: 12px;
+    width: 10%;
+    height: 40px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: bold;
+    transition: background-color 0.2s;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.save-button:hover {
+    background-color:  var(--importantcolor);
+}
+@media screen and (max-width:1440px){
+.modal-container {
+
+    width: 80%;
+   
+
+}
+.modal-header h2 {
+   
+    font-size: 1.2rem;
+   
+}
+
+.modal-header p {
+
+    font-size: 0.65rem;
+   
+}
+.field-list-right {
+   
+    width: 25%;
+ 
+}
+.field-list-left{
+    
+    width: 25%;
+   
+}
+}

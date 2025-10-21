@@ -1,0 +1,45 @@
+.balance{
+    padding: 5px 7px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    font-family: bold;
+}
+.price{
+    display: flex;
+    align-items: center;
+    h1{
+        margin: 4px;
+        font-family: extra-bold;
+        font-size: 1.5em;
+    }
+}
+.button{
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--importantcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: bold;
+    color: white;
+    font-size: 1.1em;
+    padding: 0 10px;
+    width: 130px;
+}
+@media screen and (max-height: 1440px) {
+    .price{
+        font-size: 15px;
+    }
+}
+@media screen and (max-height: 1024px) {
+    .price{
+        font-size: .8em;
+    }
+    .balance{
+        height: 55px;
+    }
+}

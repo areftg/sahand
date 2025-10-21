@@ -1,0 +1,287 @@
+.Page{
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+.reportCardPage {
+  direction: rtl;
+  font-family: bold;
+  font-size: 12pt;
+  color: black;
+  background: white;
+  
+  /* ابعاد A4 */
+  width: 21cm;
+  min-height: 29.7cm; /* استفاده از min-height بهتر از height است */
+  padding: 0.5cm 0.5cm;
+  
+  /* چیدمان کلی صفحه با Flexbox */
+  display: flex;
+  flex-direction: column;
+
+  /* استایل‌های ظاهری و موقعیت در صفحه */
+  margin: 2rem auto;
+  box-sizing: border-box;
+
+  p{
+    margin: 5px 0 15px 0;
+  }
+}
+
+/* --- بخش سربرگ (Header) --- */
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+.schoolLogo {
+  width: 25px;
+  height: auto;
+}
+.schoolInfo {
+  height: 100%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 6px;
+}
+.schoolInfo h4, h6, h3 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+.schoolInfo h4{
+    font-size: 11px;
+}
+.schoolInfo h6 {
+    font-size: 9px;
+}
+.schoolInfo h3{
+    font-size: 12px;
+}
+
+
+.studentDetails {
+  flex-grow: 1;
+}
+.studentDetails table {
+  width: 100%;
+  font-size: 10pt;
+   border-spacing: 5px 0;
+  border-collapse: separate;
+    height: 3cm;
+  
+}
+.studentDetails td {
+  padding: 4px 6px;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 3cm;
+}
+.studentDetails td p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 12px;
+    font-family: Bold;
+    position: relative;
+}
+.studentDetails td p::before {
+  content: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 0;
+}
+.studentDetails td p span {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  padding: 0 2px;
+}
+.label {
+  white-space: nowrap;
+}
+.value {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+
+.studentPhotoContainer {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 2.5cm;
+  height: 3cm;
+  padding: 3px;
+}
+.studentPhoto {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.tableContainer {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gradesTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11pt;
+}
+
+/* فقط بردرهای داخلی سلول‌ها باقی می‌مانند */
+.gradesTable th,
+.gradesTable td {
+  border: 1px solid #606060;
+  padding: 10px 8px;
+  text-align: center;
+}
+.borderright{
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid black !important;
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+.bordercenter{
+  border-top: 0 !important;
+  border-bottom: 1px solid black !important;
+}
+.borderleft{
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid black !important;
+}
+.borderright, .bordercenter, .borderleft:last-child {
+  border-bottom: none !important;
+}
+.tborderright{
+  border-right: 0 !important;
+  border-top: 0 !important;
+  p {
+    margin: 0;
+    transform: rotateZ(-90deg);
+    font-size: 10px;
+  }
+}
+.tbordercenter{
+  border-top: 0 !important;
+}
+.tborderleft{
+  border-left: 0 !important;
+  border-top: 0 !important;
+}
+/* --- بخش اصلی (جدول نمرات) --- */
+.gradesSection {
+  background-color: white;
+  border: black 1px solid;
+  border-radius: 8px;
+  height: 20.45cm;
+}
+
+.gradesTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11pt;
+  height: 100%;
+}
+
+.gradesTable th,
+.gradesTable td {
+  padding: 8px; /* افزایش padding برای خوانایی بهتر */
+  text-align: center;
+  font-size: 15px;
+}
+
+.gradesTable th {
+  font-weight: bold;
+}
+
+.recordBox {
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.recordBox:last-child {
+  border-bottom: none;
+}
+
+/* ستون نام درس را راست‌چین می‌کند */
+.gradesTable td:nth-child(2) {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ایجاد سطرهای خاکستری یکی در میان */
+.gradesTable tbody tr:nth-child(odd) {
+  background-color: #BBBBBB;
+  border-radius: 0 !important;
+}
+.gradesTable tbody tr:nth-child(odd) td{
+  border-radius: 0 !important;  
+}
+.gradesTable tbody tr:last-child td{
+  border-radius: 0 !important;
+}
+
+/* --- بخش پابرگ (Footer) --- */
+.reportFooter{
+    width: 100%;
+    height: 100%;
+    direction: ltr;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    p {
+      display: flex;
+      align-items: center;
+      column-gap: 0.4vw;
+      cursor: pointer;
+      svg {
+        width: 26px;
+      }
+    }
+}
+
+/* --- استایل مخصوص پرینت --- */
+@media print {
+  /* تمام استایل‌های ظاهری صفحه وب را حذف می‌کند */
+  body {
+    background-color: #fff;
+  }
+  .reportCardPage {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+  
+  /* اطمینان از اینکه فقط کارنامه پرینت گرفته می‌شود */
+  body * {
+    visibility: hidden;
+  }
+  .reportCardPage, .reportCardPage * {
+    visibility: visible;
+    size: A4;
+  }
+  .reportCardPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

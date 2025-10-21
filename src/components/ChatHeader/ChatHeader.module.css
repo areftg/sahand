@@ -1,0 +1,76 @@
+.Headerback{
+    width: 100vw;
+    height: 60px;
+   
+    position: absolute;
+   display: flex;
+   justify-content: start;
+   padding-right: 15px;
+    top: 15px;
+    z-index: 12;
+   
+}
+.Header{
+    min-height: 20px;
+    width: 93%;
+     background-color: #ffffff;
+      border-radius: 16px;
+      height: 60px;
+       display: flex;
+       justify-content: space-between;
+       padding: 0 15px;
+       align-items: center;
+}
+.img{
+    display: inline-block;
+    width: 60px;
+    padding: 10px;
+    height: 60px;
+    background-color: white;
+    border-radius: 16px;
+    margin-left: 5px;
+}
+.right{
+    width: 50%;
+    font-family: bold;
+    color: var(--importantcolor);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.right p{
+    display: inline-block;
+    font-size: 13px;
+}
+.right p:nth-child(1){
+    font-size: 18px;
+}
+.left{
+    width: 50%;
+    font-family: bold;
+    color: var(--importantcolor);
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: start;
+    direction: ltr;
+    gap: 5px;
+}
+.left p:nth-child(1){
+    font-size: 12px;
+}
+.left p{
+    margin: 0;
+        margin-top: 5px;
+}
+.leftlogo{
+    display: flex;
+    align-items: center;
+  gap: 2px;
+}
+.leftlogo img{
+    height: 25px;
+}
+.leftlogo p{
+    margin-top: 5px;
+}

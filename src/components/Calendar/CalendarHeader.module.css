@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.headerBox {
+  /* cursor: pointer; */
+ 
+  border-radius: 8px;
+ 
+  display: inline-flex;
+  gap: 6px;
+  font-family: bold;
+  direction: rtl;
+  user-select: none;
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  min-width: 450px;
+   animation: open 150ms linear;
+ 
+  
+}
+@keyframes open {
+    0%{
+        scale: 0.5;
+    }
+    100%{
+        scale: 1;
+    }
+}

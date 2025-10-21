@@ -1,0 +1,34 @@
+/* LoadingSpinner.module.css */
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.spinner {
+  width: 1.6em;
+  /* اندازه اسپینر */
+  height: 1.6em;
+  /* اندازه اسپینر */
+  border: 0.25em solid white;
+  /* رنگ زمینه دایره (بر اساس تصویر، کمی تیره تر از خاکستری روشن) */
+  border-top-color: var(--importantcolor);
+  /* رنگ بخش متحرک (سبزآبی روشن) */
+  border-radius: 50%;
+  /* گرد کردن برای ساخت دایره */
+  animation: spin 1s linear infinite;
+  /* انیمیشن چرخش */
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,102 @@
+.DocumentPart6 {
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    font-family: extra-bold;
+  }
+}
+
+.list {
+  width: 400px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.option {
+  background-color: var(--backcolor);
+  padding: 7px;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+
+  p {
+    margin: 0;
+    font-family: bold;
+    font-size: 18px;
+  }
+}
+
+.title {
+  background-color: white;
+  width: 200px;
+  font-family: bold;
+  border-radius: 4px;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 5px;
+}
+
+.nextButton {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: var(--importantcolor);
+  border: 0;
+  color: white;
+  font-family: bold;
+  font-size: 1em;
+  border-radius: 8px;
+  margin: 25px auto;
+
+  img {
+    width: 1.5vw;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--importantcolor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.price {
+  width: 30%;
+
+  font-family: bold;
+  border-radius: 4px;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 5px;
+  
+  p {
+    font-size: 0.9em;
+  }
+}

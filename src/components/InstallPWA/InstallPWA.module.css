@@ -1,0 +1,105 @@
+.pwa-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(84, 84, 84, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  direction: rtl; /* برای زبان فارسی */
+}
+
+.pwa-modal-content {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  font-family: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slide-up 0.3s ease-out;
+}
+.pwa-checkbox label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pwa-checkbox label input{
+ height: 20px;
+ width: 20px;
+ border: 2px solid var(--importantcolor);
+}
+
+.pwa-modal-logo {
+  width: 72px;
+  
+
+}
+
+.pwa-modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0;
+}
+
+.pwa-modal-content p {
+  font-size: 0.9rem;
+  color: black;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+.pwa-modal-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.pwa-install-button,
+.pwa-dismiss-button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pwa-install-button {
+    background-color: var(--importantcolor); /* رنگ اصلی */
+  color: white;
+  font-family: bold;
+}
+
+.pwa-install-button:hover {
+  background-color: var(--importantcolor);
+}
+
+.pwa-dismiss-button {
+  background-color: #e9ecef; /* رنگ خنثی */
+  color: #495057;
+  font-family: bold;
+}
+
+.pwa-dismiss-button:hover {
+  background-color: #ced4da;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

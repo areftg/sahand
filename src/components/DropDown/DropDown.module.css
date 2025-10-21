@@ -1,0 +1,193 @@
+.main{
+    position: relative;
+    width: 20vw;
+    display: flex;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+}
+.container svg{
+     transition: transform 0.3s ease;
+}
+.button {
+  overflow: hidden;    
+  text-overflow: ellipsis; 
+  display: block;         
+  width: 100%;             
+  text-align: right;       
+  font-family: bold;
+  font-size: .9em;
+  color: black;   
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.options {
+    position: absolute;
+    background-color: white;
+    width: 210px;
+    border-radius: 16px;
+    z-index: 5;
+    color: black;
+    overflow-y: auto;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-height: 210px; 
+    padding: 5px;
+    right: -100px;
+  }
+
+.show {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+.hide {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+.options::-webkit-scrollbar{
+  display: none;
+}
+.options::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+.option{
+    background-color: var(--backcolor);
+    margin-top: 5px;
+    border-radius: 8px;
+    list-style-type: none; cursor: pointer;
+    height: 40px;
+    display: flex;
+    z-index: 5;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px;
+    color: black;
+    font-size: .8em;
+}
+.option:nth-child(1){
+  margin-top: 0;
+}
+.circle{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filled{
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.sort{
+  display: none;
+}
+/* استایل برای حالت arrow */
+.mobileAsArrow {
+  /* مثلاً می‌تونید عرض یا استایل کلی رو تنظیم کنید */
+}
+
+/* استایل برای آیکون فلش در حالت arrow */
+.arrowOnly {
+  /* تنظیمات خاص برای آیکون فلش، مثل بزرگ‌تر کردن یا تغییر موقعیت */
+  display: block;
+  margin: 0 auto; /* مثلاً وسط‌چین کردن */
+}
+
+/* مخفی کردن دکمه در حالت arrow */
+.mobileAsArrow .button {
+  display: none;
+}
+.squre{
+  padding: 5px;
+  background-color: var(--backcolor);
+  border-radius: 4px;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+  .container{
+    width: 100%;
+  }
+    .left{
+        width: 45%;
+    }
+    .button{
+        font-size: 12px;
+        width: 100%;
+    }
+
+}
+ @media screen and (max-width: 2560px) {
+  .sort{
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: fit-content;
+            img{
+          width: 20px;
+          height: 20px;
+        }
+  }
+  .main{
+    width: 13vw;
+  }
+    .button{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 450px) {
+  .main{
+    width: 120px;
+  }
+
+    .mobileAsIcon .container { 
+        display: none;
+    }
+
+    .mobileAsIcon .sort { 
+        display: block;
+        cursor: pointer; 
+    }
+    .button {
+    color: white;
+  }
+  .container svg path {
+    fill: white; 
+  }
+  .squre svg path{
+  fill: var(--importantcolor);
+}
+  .options{
+    top: 30px;
+    right: -175px;
+  }
+  .button{
+        font-size: 14px;
+    }
+} 

@@ -1,0 +1,501 @@
+/* Define color variables to easily change the theme */
+:root {
+    --primary-color: var(--importantcolor);
+    /* The main teal color */
+    --primary-text-color: #ffffff;
+    /* White text for colored backgrounds */
+    --secondary-bg-color: white;
+    /* Light gray for the main background */
+    ;
+    /* Light border for cells */
+    --dark-text-color: #333333;
+    /* Dark text for light backgrounds */
+    --font-family: bold;
+    /* A clean, modern Persian font */
+}
+
+
+
+.container {
+    padding: 10px;
+    height: auto;
+    background-color: var(--secondary-bg-color);
+    font-family: var(--font-family);
+    direction: rtl;
+    border-radius: 16px;
+    height: fit-content;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 71vh;
+    min-height: 71vh;
+}
+
+.Loading {
+    margin-top: 150px;
+    font-size: 22px;
+}
+
+.error {
+    background-color: #fdecea;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+    border-radius: 7px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.errorHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.errorArrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid #c62828;
+    margin-left: 10px;
+    /* در فارسی margin-left برای قرارگیری در سمت چپ مناسب است */
+    transition: transform 0.2s ease-in-out;
+}
+
+.errorArrow.open {
+    transform: rotate(90deg);
+}
+
+.errorTitle {
+    flex-grow: 1;
+    /* باعث می‌شود عنوان تمام فضای خالی را بگیرد */
+
+    text-align: right;
+    padding-right: 10px;
+}
+
+.errorCount {
+    background-color: #c62828;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+}
+
+.errorContent {
+    padding: 0 10px 10px 10px;
+    border-top: 1px solid #ef9a9a;
+    text-align: right;
+}
+
+.errorContent p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.errordiv {
+    padding: 8px;
+    border: 1px solid #ef9a9a;
+    background-color: #fff;
+    /* برای تمایز از پس‌زمینه اصلی */
+    margin-bottom: 5px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    /* برای نمایش صحیح \n */
+    line-height: 1.6;
+    text-align: center;
+}
+
+.submitbut {
+    width: 190px;
+    height: 50px;
+    background-color: var(--importantcolor);
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    font-family: bold;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.container::-webkit-scrollbar {
+    border-radius: 16px;
+    width: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    width: 10px;
+    background-color: var(--importantcolor);
+}
+
+.editorWrapper {
+    background-color: #fff;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.container h3 {
+    margin: 5px 0 10px 0;
+    text-align: center;
+    font-size: 1.1vw;
+
+    line-height: 1.5;
+}
+
+.mainHeader {
+    background-image: linear-gradient(to left, var(--primary-color), var(--secondary-bg-color));
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.controlsContainer {
+    /* Optional: If you want to put a background/border around controls */
+    margin-bottom: 20px;
+}
+
+/* Styles for Dropdowns and Selector */
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 8;
+}
+
+.selectorContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selectorContainer p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--dark-text-color);
+}
+
+.selector {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.selector.active {
+    background-color: var(--primary-color);
+}
+
+.dropdownContainer {
+    position: relative;
+    width: fit-content;
+    max-width: 250px;
+    display: flex;
+    user-select: none;
+    gap: 5px;
+
+}
+.dropdownclear{
+    width: 44px;
+    height: 44px;
+    background-color: var(--backcolor);
+    margin: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 30px;
+        width: 30px;
+    }
+    
+}
+
+.dropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backcolor);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--dark-text-color);
+    position: relative;
+}
+
+.selectedValue {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.dropdownArrow {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    filter: invert(55%) sepia(8%) saturate(1558%) hue-rotate(135deg) brightness(90%) contrast(86%);
+    /* Tints the arrow to match primary color */
+}
+
+.dropdownHeader[aria-expanded="true"] .dropdownArrow {
+    transform: rotate(180deg);
+}
+
+.dropdownList {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dropdownItem {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: right;
+    color: var(--dark-text-color);
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+
+/* --- NEW SCHEDULE LAYOUT --- */
+
+/* This is the container for all rows */
+.weeklySchedule {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+/* This is each individual row */
+.scheduleRow {
+    display: grid;
+    /* Define columns: 1fr for day, 4x 1.5fr for bells */
+    /* grid-template-columns: 1fr repeat(4, 1.5fr); */
+    gap: 10px;
+    /* Space between cells in a row */
+    align-items: center;
+    padding: 8px;
+
+    border-radius: 12px;
+    background-color: var(--backcolor);
+    transition: box-shadow 0.2s ease;
+}
+
+
+
+/* Special styling for the header row */
+.headerRow {
+    border: none;
+    background-color: var(--backcolor);
+    padding: 0 8px;
+
+}
+
+
+
+/* --- CELL STYLES --- */
+.headerCell:nth-child(1) {
+    border: 0;
+}
+
+.headerCell {
+
+    padding: 5px;
+    text-align: center;
+
+
+    font-size: 0.9rem;
+    font-weight: normal;
+    border-right: black 0.5px solid;
+}
+
+
+/* Base style for all cells in the schedule body */
+.dayCell,
+.scheduleCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    min-height: 55px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+/* The cell showing the day name (e.g., "شنبه") */
+.dayCell {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+/* An empty schedule cell */
+.scheduleCell {
+    background-color: var(--secondary-bg-color);
+    cursor: pointer;
+}
+
+
+
+/* A schedule cell that is filled with a lesson */
+.filledCell {
+    background-color: #508481;
+    color: var(--primary-text-color);
+}
+
+/* Half-bell styles */
+.halfBell {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    gap: 5px;
+
+}
+
+.halfBellPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--primary-text-color);
+    background-color: #508481;
+    border-radius: 10px;
+}
+
+.halfBellPart:first-of-type {}
+
+.halfBellPart:last-of-type {}
+
+
+.confooter {
+
+    width: 100%;
+
+    display: flex;
+
+
+
+    height: 15%;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    gap: 10px;
+
+}
+
+.footer {
+
+    height: 100%;
+
+    width: 50%;
+
+    background-color: white;
+
+    display: inline-block;
+
+    border-radius: 16px;
+
+    font-family: bold;
+    overflow: hidden;
+
+    padding: 10px;
+
+}
+
+.footer h3 {
+    text-align: start;
+    font-size: 16px;
+    margin-top: 0;
+
+}
+
+.unselectedlist {
+    /* 
+    
+    height: 100%;
+
+    
+    
+    
+    
+    
+    direction: rtl; */
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+    display: flex;
+    max-height: 45px !important;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.unselectedlist::-webkit-scrollbar {
+
+    height: 30px;
+    width: 3px;
+
+}
+
+.unselectedlist::-webkit-scrollbar-thumb {
+    height: 30px;
+    background-color: var(--importantcolor);
+    border-radius: 25px;
+}
+
+.unselectedlist p {
+
+    width: 100%;
+
+    /* height: 20px; */
+
+    padding: 5px 10px;
+    font-size: 13px;
+
+    /* box-sizing: content-box; */
+
+    background-color: var(--backcolor);
+
+    border-radius: 15px;
+
+    margin: 1px 5px;
+
+}

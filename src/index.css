@@ -1,0 +1,114 @@
+@font-face {
+  font-family: bold;
+  src: url("./assets/Fonts/PEYDA-BOLD\(@VIERATEC\).TTF")format("truetype");
+
+}
+@font-face {
+  font-family: extra-bold;
+  src: url("./assets/Fonts/PEYDA-EXTRABOLD(@VIERATEC).TTF")format("truetype");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+*{
+  box-sizing: border-box;
+  user-select: none;
+   font-weight: normal !important;
+}
+:root{
+  --backcolor:#c5dada;
+  --importantcolor:#69b0b2; 
+  --outback:#ffcfd0;
+  --outbutton:#b06869;
+  --inback:#e8fffd;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+ 
+}
+/* استایل های دیفالت مرورگر */
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+
+button{
+  cursor: pointer !important;
+}
+
+@media screen and (max-width:450px){
+  body {
+
+  overflow: auto;
+ 
+}
+}

@@ -1,0 +1,165 @@
+.DocumentPart2{
+text-align: center;
+width: 100%;
+h1{
+  font-family: extra-bold;
+}
+}
+
+.list{
+  width: 20%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.option{
+  background-color: var(--backcolor);
+  padding: 7px;
+  margin-top: 2px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+}
+.title{
+  background-color: white;
+  width: 80%;
+  font-family: bold;
+  border-radius: 4px;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 5px;
+}
+.nextButton{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--importantcolor);
+    border: 0;
+    color: white;
+    font-family: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin: 25px  auto;
+    img{
+        width: 1.5vw;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+/* خود کادر اصلی انتخاب شده */
+.dropdown {
+  appearance: none; /* استایل پیش‌فرض رو حذف می‌کنه */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  border: none;
+  padding: 0px;
+  border-radius: 8px;
+}
+
+/* فلش پیش‌فرض رو حذف و خودت بذار */
+.dropdown {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+}
+
+
+.dropdown option {
+  padding: 8px !important;
+  font-size: .8em !important;
+  background: #fff;
+  color: #333;
+  border-radius: 12px !important;
+  border: none;
+}
+
+.dropdown option:hover {
+  background: var(--importantcolor) !important;
+  color: white;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+}
+
+.title{
+  font-size: .8em;
+  padding: 10px 3px;
+  width: 80%;
+
+}
+
+select{
+  font-size: .8em;
+  font-family: bold;
+  width: 100%;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--importantcolor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* @media screen and (max-width: 1440px){
+  .DocumentPart2{
+    padding-top: 50px;
+  }
+  .title{
+    font-size: 16px;
+  }
+
+  select{
+    font-size: .8em;
+    font-family: bold;
+  }
+
+  .list{
+    width: 25%;
+  }
+  .nextButton{
+    width: 13%;
+    font-size: 16px;
+  }
+  .circle{
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1024px){
+  .DocumentPart2{
+    padding-top: 50px;
+  }
+  .title{
+    font-size: 12px;
+  }
+  .list{
+    width: 25%;
+  }
+  .nextButton{
+    width: 18%;
+    font-size: 16px;
+  }
+  .circle{
+    width: 30px;
+    height: 30px;
+  }
+} */

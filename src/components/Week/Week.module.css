@@ -1,0 +1,514 @@
+.container {
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  margin-top: 25px;
+  border-radius: 16px;
+  padding: 10px;
+  padding-bottom: 0;
+  font-family: bold;
+  user-select: none;
+  height: 55vh;
+  overflow: hidden;
+}
+
+.days::-webkit-scrollbar {
+  border-radius: 16px;
+  width: 10px;
+}
+
+.activeClassNow {
+  background-color: var(--importantcolor) !important;
+  display: flex;
+  position: relative;
+
+  p {
+    color: white !important;
+    white-space: nowrap;
+    /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+    overflow: hidden;
+    /* متنی که از کادر بیرون زده را پنهان می‌کند */
+    text-overflow: ellipsis;
+  }
+}
+
+.activeClassNow .now {
+  width: 22%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: 25px 6px 6px 25px;
+  padding-left: 5px;
+
+}
+
+.activeClassNow .now .nowloader {
+  display: flex;
+}
+
+.nowloader {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  display: none;
+}
+
+.nowloader div {
+  position: absolute;
+
+  border-radius: 50%;
+  animation: noww 1s infinite ease-in-out;
+}
+
+.nowloader div:nth-child(1) {
+  inset: 15%;
+  z-index: 8;
+
+  animation: none;
+  background-color: var(--importantcolor);
+}
+
+.nowloader div:nth-child(2) {
+  inset: 5%;
+  z-index: 7;
+  background-color: var(--backcolor) !important;
+
+  animation-delay: 0.2s;
+
+}
+
+@keyframes noww {
+  0% {
+    transform: scale(1);
+
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+
+    opacity: 0;
+
+  }
+}
+
+/* You can add a specific style for the header of the active column if you want */
+.timeHeaderRow .activeTimeSlot {
+  background-color: #b2ebf2;
+}
+
+.days::-webkit-scrollbar-thumb {
+  background-color: var(--importantcolor);
+  border-radius: 16px;
+}
+
+.filter {
+  margin-left: 5px;
+  width: 40%;
+}
+
+.header {
+  width: 100%;
+  height: 45px;
+  background-image: linear-gradient(to left, var(--importantcolor) 1%, white);
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  h1 {
+    margin: 0;
+    font-size: 1.7vw;
+  }
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.days {
+  height: 100%;
+
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: scroll;
+}
+
+.day {
+  height: 60px;
+  width: 100%;
+  background-color: var(--backcolor);
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.day p {
+  width: 130px;
+  height: 40px;
+  padding: 5px;
+  background-color: var(--importantcolor);
+  color: white;
+  border-radius: 7px;
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+     white-space: nowrap; /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden; /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+
+.class {
+  width: 21.1%;
+  height: 40px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.class p {
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden;
+  /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+
+.holiday {
+  background-image: linear-gradient(to left, var(--outback) 20%, var(--backcolor));
+  position: relative;
+}
+
+.holiday p {
+  position: relative;
+  white-space: nowrap;
+  /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden;
+  /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+
+.holi {
+  background-color: var(--outbutton) !important;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  opacity: 85%;
+}
+
+.holidayLabel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--outbutton);
+  color: rgb(255, 255, 255);
+  font-family: bold;
+  border-radius: 3px;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holiday .class p {
+  opacity: 100%;
+  color: rgba(0, 0, 0, 0.219);
+  white-space: nowrap;
+  /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden;
+  /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+
+.holiday .class p {
+  opacity: 100%;
+  color: rgba(0, 0, 0, 0.219);
+  white-space: nowrap;
+  /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden;
+  /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+
+
+.double {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+ 
+  background-color: transparent;
+  align-items: center;
+
+}
+
+.double p {
+  text-align: center;
+  white-space: nowrap;
+  /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden;
+  /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+.activeClassNow .half {
+  background-color: var(--importantcolor);
+
+}
+.activeClassNow.double{
+  padding: 0;
+}
+.activeClassNow.double .now{
+  display: none;
+}
+.half {
+  display: flex;
+  flex: 1;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+        white-space: nowrap; /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden; /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+
+}
+
+@media screen and (max-width:1440px) {
+  .activeClassNow {
+    justify-content: end;
+   
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .days {
+    height: 45vh;
+
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: scroll;
+  }
+
+  .class {
+    width: 21%;
+  }
+
+  .container {
+
+    background-color: white;
+    margin-top: 25px;
+    border-radius: 16px;
+    padding: 10px 10px 12px 14px;
+  }
+
+  .days::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .days {
+    gap: 5px;
+
+  }
+
+  .day {
+    padding: 5px;
+    height: 50px;
+    gap: 5px;
+  }
+
+  .double {
+    gap: 5px;
+  }
+
+  .day p {
+    font-size: 15px;
+  }
+
+  .class p {
+    font-size: 13px;
+  }
+
+  .nowloader {
+    height: 25px;
+    width: 25px;
+  }
+
+  .nowloader div:nth-child(1) {
+    inset: 15%;
+  }
+
+  .nowloader div:nth-child(2) {
+    inset: 3%;
+  }
+
+
+}
+
+@media screen and (max-height:850px) {
+  .days {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .header {
+    width: 100%;
+
+    background-image: linear-gradient(to left, var(--importantcolor) 1%, var(--importantcolor));
+    padding: 5px;
+    height: 45px;
+
+    h1 {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .right {
+      img {
+        display: none;
+      }
+    }
+  }
+  .filter {
+  margin-left: 5px;
+  width: 40%;
+}
+
+  .container {
+    padding: 5px;
+    border-radius: 12px;
+    height: fit-content;
+  }
+
+  .days {
+    gap: 5px;
+    padding-left: 0px;
+    max-height: 100%;
+
+  }
+
+  .day {
+    gap: 6px;
+    padding: 5px;
+    height: 70px;
+    padding: 5px;
+
+    border-radius: 5px;
+  }
+
+  .day p {
+    font-size: 12px;
+    width: 80px;
+    height: 60px;
+    padding: 10px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+  }
+
+  .class {
+    height: 60px;
+    border-radius: 4px;
+    width: 20% !important;
+
+
+  }
+
+  .class p {
+    font-size: 12px;
+    height: 60px;
+
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+
+  .filter {
+    margin: 0;
+  }
+
+  .half {
+    height: 60px;
+    border-radius: 4px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .double {
+    gap: 5px;
+    flex-direction: column;
+    height: 60px;
+    width: 100px;
+  }
+
+  .double p {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nowloader {
+    display: none;
+  }
+
+  .activeClassNow .now {
+    display: none;
+
+  }
+
+  .activeClassNow {
+    padding: 0;
+
+  }
+}

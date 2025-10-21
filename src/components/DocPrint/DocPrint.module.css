@@ -1,0 +1,125 @@
+/* این فایل فقط استایل‌های نمایشی روی صفحه را کنترل می‌کند */
+
+.printPreviewBackground {
+  padding: 60px 0;
+  font-family: bold;
+    overflow-y: auto;
+    height: 100vh;
+
+}
+
+/* نام کلاس به reportCardPage تغییر کرد */
+.reportCardPage {
+  font-family: bold;
+  direction: rtl;
+  font-size: 12pt;
+  color: #000;
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 15mm;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+}
+.printButtoncont{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.printButton {
+  display: block;
+
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: bold;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--importantcolor);
+  color: white;
+
+}
+
+.topInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11pt;
+  margin-bottom: 2mm;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 13pt;
+  margin: 5mm 0 3mm 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.reportCardPage table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2mm;
+  font-size: 11pt;
+}
+
+.reportCardPage th,
+.reportCardPage td {
+  border: 0.4mm solid black;
+  padding: 2mm;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.reportCardPage th {
+  background: #e6e6e6 !important;
+  font-weight: bold;
+  text-align: center !important;
+}
+
+.allAmount {
+  border: none;
+  text-align: center;
+}
+
+.noBorder {
+  border: none !important;
+  background: none !important;
+}
+
+.footerText {
+  font-size: 10pt;
+  margin-top: 2mm;
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.padding td {
+  padding-bottom: 30px;
+}
+
+.signature {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15mm;
+  font-size: 11pt;
+}
+
+.signature div {
+  width: 30%;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.w8 { width: 8%; }
+.w12 { width: 12%; }
+.w15 { width: 15%; }
+.w40 { width: 40%; }

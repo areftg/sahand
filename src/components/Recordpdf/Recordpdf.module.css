@@ -1,0 +1,327 @@
+.Page{
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.reportCardPage {
+  direction: rtl;
+  font-family: bold;
+  font-size: 12pt;
+  color: black;
+  background: white;
+  
+  /* ابعاد A4 */
+  width: 19cm;
+  min-height: 29.7cm; /* استفاده از min-height بهتر از height است */
+  padding: 0.5cm 0.5cm;
+   max-height: 29.7cm;
+  
+  /* چیدمان کلی صفحه با Flexbox */
+  display: flex;
+  flex-direction: column;
+
+  /* استایل‌های ظاهری و موقعیت در صفحه */
+  box-sizing: border-box;
+  
+}
+.tableContainer {
+  border-radius: 8px; /* مقدار گردی گوشه‌ها */
+  overflow: hidden; /* این خط مهم‌ترین بخش است و گوشه‌های تیز جدول را مخفی می‌کند */
+ /* بردر را به این div منتقل می‌کنیم */
+}
+
+/* استایل جدول را ویرایش کنید */
+.gradesTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11pt;
+  /* بردر اصلی را از خود جدول حذف می‌کنیم چون div آن را دارد */
+  /* border: 1px solid #aaa;  <-- این خط را حذف یا کامنت کنید */
+}
+
+/* فقط بردرهای داخلی سلول‌ها باقی می‌مانند */
+.gradesTable th,
+.gradesTable td {
+  border: 1px solid #606060;
+
+  padding: 10px 8px;
+  text-align: center;
+}
+
+/* --- بخش سربرگ (Header) --- */
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+ 
+  padding-bottom: 10px;
+
+}
+.borderright{
+  border-right: 0 !important;
+    border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.bordercenter{
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.borderleft{
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+
+
+.tborderright{
+  border-right: 0 !important;
+    border-top: 0 !important;
+
+}
+.tbordercenter{
+  border-top: 0 !important;
+
+}
+.tborderleft{
+  border-left: 0 !important;
+  border-top: 0 !important;
+
+}
+
+.schoolInfo {
+  text-align: center;
+}
+.schoolInfo h4{
+    font-size: 10px;
+    margin: 0;
+}
+.schoolInfo h3{
+    font-size: 12px;
+     margin: 0;
+}
+
+.schoolLogo {
+  width: 20px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.studentDetails {
+  flex-grow: 1;
+}
+
+.studentDetails table {
+  width: 100%;
+  font-size: 10pt;
+   border-spacing: 5px 0;
+  border-collapse: separate;
+    height: 3cm;
+  
+}
+
+.studentDetails td {
+  padding: 4px 6px;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 3cm;
+}
+.line{
+    width: 30%;
+    height: 2px;
+    border: 2px dashed black;
+    display: inline-block;
+    margin: 0 5px;
+
+}
+.studentDetails td p{
+    margin: 0;
+    font-size: 12px;
+}
+.studentPhotoContainer {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 2.5cm;
+  height: 3cm;
+}
+
+.studentPhoto {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* --- بخش اصلی (جدول نمرات) --- */
+.gradesSection {
+ 
+ background-color: white;
+ border: black 1px solid;
+ border-radius: 8px;
+ height: 20.3cm;
+}
+
+.gradesTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11pt;
+   
+    height: 100%;
+}
+
+.gradesTable th,
+.gradesTable td {
+ 
+  padding: 8px 8px; /* افزایش padding برای خوانایی بهتر */
+  text-align: center;
+  font-size: 12px;
+
+  
+}
+
+.gradesTable th {
+  background-color: #BBBBBB;
+  font-weight: bold;
+}
+
+/* ستون نام درس را راست‌چین می‌کند */
+.gradesTable td:nth-child(2) {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ایجاد سطرهای خاکستری یکی در میان */
+.gradesTable tbody tr:nth-child(even) {
+  background-color: #BBBBBB;
+  border-radius: 0 !important;
+  
+}
+.gradesTable tbody tr:nth-child(even) td{
+  border-radius: 0 !important;  
+}
+.gradesTable tbody tr:last-child td{
+border-radius: 0 !important;
+}
+
+/* --- بخش پابرگ (Footer) --- */
+.reportFooter{
+    width: 100%;
+    height: 100%;
+    direction: ltr;
+    padding: 5px 0;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    
+   
+    
+}
+.right{
+    width: 30%;
+    border: 1px solid black;
+    height: 3cm;
+    border-radius: 8px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 150px;
+      height: 150px;
+    }
+}
+.left{
+    width: 70%;
+       display: inline-block;
+       direction: rtl;
+     p{
+        width: fit-content;
+        margin: 0;
+         display: inline-block;
+     }
+}
+.score{
+    border: 1px solid black;
+     border-radius: 8px;
+     text-align: center;
+      display: flex;
+     width: 100px;
+     height: 30px;
+     font-size: 14px;
+      align-items: center;justify-content: center;
+}
+.leftjust{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 1cm;
+    gap: 5px;
+  
+}
+.charscore{
+     border: 1px solid black;
+     border-radius: 8px;
+     text-align: center;
+     width: 213px;
+     height: 30px;
+       font-size: 14px;
+       display: flex;
+       align-items: center;justify-content: center;
+}
+.auth{
+      border: 1px solid black;
+     border-radius: 8px;
+     height: 2cm;
+     margin-top: 3px;
+     
+}
+.managersign{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2cm;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  span{
+    color: #606060;
+  }
+}
+.paragraph{
+  width: 55%;
+  height: 100%;
+  p{
+    display: block;
+  }
+}
+
+/* --- استایل مخصوص پرینت --- */
+@media print {
+  /* تمام استایل‌های ظاهری صفحه وب را حذف می‌کند */
+  body {
+    background-color: #fff;
+  }
+  .reportCardPage {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+  
+  /* اطمینان از اینکه فقط کارنامه پرینت گرفته می‌شود */
+  body * {
+    visibility: hidden;
+  }
+  .reportCardPage, .reportCardPage * {
+    visibility: visible;
+    size: A4;
+  }
+  .reportCardPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,122 @@
+.PCallSchool{
+    font-family: bold;
+    width: 80vw;
+    height: 60vh;
+    br{
+        display: none;
+    }
+}
+.content{
+    width: 87%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+    align-items: center;
+    justify-content: left;
+}
+.row{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 0.3vw;
+    p{
+        margin: 0;
+        font-size: 1.2em;
+    }
+    button {
+        height: 100%;
+        padding: 0 35px;
+        background: var(--importantcolor);
+        color: #fff;
+        font-family: Bold;
+        font-size: 1.8em;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+.textbox, .textbox2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 1.5em;
+    direction: ltr;
+}
+.textbox2 {
+    width: 59%;
+}
+
+
+@media screen and (max-width: 1440px) {
+    h1 {
+        font-size: 2em;
+        margin-bottom: 3vw;
+    }
+}
+@media screen and (max-width: 1024px) {
+
+    .row{
+        height: 12%;
+        p{
+            font-size: 0.9em;
+        }
+    }
+    .textbox2{
+        width: 75%;
+    }
+     h1 {
+        font-size: 1.5em;
+        margin-bottom: 3vw;
+    }
+}
+@media screen and (max-width: 450px){
+    .PCallSchool{
+        width: 94vw;
+        h1{
+            font-size: 18px;
+        }
+        br{
+            display: unset;
+        }
+    }
+    .content{
+        width: 100%;
+    }
+    .displaynone{
+        display: none;
+    }
+    .column{
+        width: 100%;
+        row-gap: 2vh;
+    }
+    .row{
+        height: 7vh;
+        column-gap: 2vw;
+        button{
+            width: 30%;
+            border-radius: 6px;
+        }
+    }
+    .textbox{
+        width: 70%;
+        border-radius: 6px;
+    }
+    .textbox2{
+        width: 100%;
+        border-radius: 6px;
+    }
+}

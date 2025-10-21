@@ -1,0 +1,25 @@
+.chatBack{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backcolor);
+    position: fixed;
+   
+
+    top: 0;
+    right: 0;
+    background-image: url("../../assets//images//chatback.svg");
+    
+     background-size: 800px; 
+}
+.Sidebar{
+    position: fixed;
+    top: 70px;
+}
+.chatlist{
+    height: fit-content;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    width: 95.5vw;
+   
+    margin-right: 4.5vw;
+}

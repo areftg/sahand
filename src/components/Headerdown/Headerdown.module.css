@@ -1,0 +1,185 @@
+.headerlist{
+     width: 93.5vw;
+    height: fit-content;
+    background-color: white;
+    border-radius: 15px;
+ 
+    flex-direction: column;
+    padding: 50px 5px 5px 5px;
+    direction: ltr; 
+    z-index: 19;
+    position: absolute;
+   left: 50%;
+   font-family: bold;
+   top: 10px;
+   transform: translate(-50%,0);
+   
+   animation: open 350ms linear forwards;
+}
+.listitem{
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-color: var(--backcolor);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    animation: openn 750ms linear forwards;
+    margin-top: 5px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: bold;
+    border: 0;
+}
+.dropdown{
+    width: 100%;
+    height: fit-content;
+    display: block;
+    background-color: var(--backcolor);
+    border-radius: 8px;
+  
+    animation: openn 750ms linear forwards;
+     margin-top: 5px;
+     padding: 0 10px;
+}
+.dropdowntitle{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: end;
+
+
+}
+.dropdowntitleinfo{
+  
+    display: flex;
+    height: 50px;
+    align-items: center;
+    position: relative;
+    text-align: end;
+    
+}
+.dropdowntitleinfo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-left: 10px;
+   
+}
+.dropdowntitleinfo p{
+    margin: 0;
+    width: fit-content;
+    font-size: 20px;
+    height: 25px;
+       white-space: nowrap; /* از شکستن خط و رفتن به خط بعد جلوگیری می‌کند */
+  overflow: hidden; /* متنی که از کادر بیرون زده را پنهان می‌کند */
+  text-overflow: ellipsis;
+}
+.dropdownContentWrapper{
+  padding-bottom: 5px;
+}
+.dropdowntitleinfopos{
+color: rgba(0, 0, 0, 0.473);
+    font-size: 11px !important;
+    width: 50px;
+     height: 30px;
+     display: flex;
+     justify-content: end;
+     align-items: center;
+  
+  
+  
+    
+}
+.dropdowncontent{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+.dropdowncontent p{
+    margin: 0;
+}
+.dropdowncontent img{
+    width: 30px;
+    height: 30px;
+   
+   
+}
+.dropdownzang{
+    justify-content: center;
+    background-color: var(--importantcolor);
+    color: white;
+}
+.dropdownzangtwo{
+        justify-content: center;
+}
+
+
+@keyframes openn {
+    from{
+       opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+}
+
+
+
+
+
+.switchContainer {
+  width: 70px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #5fb0b0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  direction: rtl;
+}
+
+.on {
+  background-color: #5fb0b0;
+}
+
+.off {
+  background-color: #ccc;
+}
+
+.switchLabel {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.switchCircle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.on .switchCircle {
+  transform: translateX(0);
+}
+
+.off .switchCircle {
+  transform: translateX(-36px);
+}

@@ -1,0 +1,91 @@
+.modal_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal_content {
+    width: clamp(380px, 33%, 600px);
+    background: #fff;
+    border-radius: 0.7rem;
+    padding: 10px 15px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2vh;
+}
+
+.header svg {
+    width: 36px;
+    height: 36px;
+    background: var(--importantcolor);
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    transition: background 0.2s ease;
+}
+
+.header svg:hover {
+    background: #ff4b4b;
+}
+
+.header p {
+    font-size: clamp(1em, 1.1vw, 1.3em);
+    font-family: Bold;
+    color: #000;
+    margin: 0;
+}
+
+.options_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0 25px;
+}
+
+.option {
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    background: var(--backcolor);
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background 0.2s ease;
+}
+
+.option:hover {
+    background: #e9f4ff;
+}
+
+.submitButton{
+    min-width: 160px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--importantcolor);
+    border: 0;
+    color: white;
+    align-items: center;
+    font-family: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    width: fit-content;
+    font-size: 20px;
+    margin: 15px  auto;
+    img{
+        width: 1.5vw;
+    }
+    p{
+        margin: 0;
+    }
+}

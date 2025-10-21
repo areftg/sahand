@@ -1,0 +1,73 @@
+.QuestionBox {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 8;
+
+}
+
+.modal {
+    width: 40%;
+    height: fit-content;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 0 30px 3px gray;
+    padding: 40px 20px;
+    font-family: bold;
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.agree {
+    background-color: var(--importantcolor);
+    border: 0;
+    padding: 10px;
+    width: fit-content;
+    min-width: 150px;
+    color: white;
+    border-radius: 4px;
+    font-family: bold;
+    font-size: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.decline {
+    background-color: var(--backcolor);
+    border: 0;
+    padding: 10px;
+    width: fit-content;
+    min-width: 150px;
+    color: white;
+    border-radius: 4px;
+    font-family: bold;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.decline:hover {
+    background-color: #687b7a90;
+    
+}
+
+.agree:hover {
+    background-color: #9ecac7;  
+
+}
